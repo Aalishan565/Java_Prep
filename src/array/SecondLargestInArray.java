@@ -1,4 +1,4 @@
-package genral;
+package array;
 
 public class SecondLargestInArray {
     public static void main(String[] args) {

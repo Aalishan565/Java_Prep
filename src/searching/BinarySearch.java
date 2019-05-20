@@ -1,10 +1,10 @@
-package array;
+package searching;
 
 public class BinarySearch {
 
     public static void main(String[] args) {
         int array1[] = {1, 2, 3, 4, 5, 6};
-        int key = 6;
+        int key = 2;
         int low = 0;
         int high = array1.length - 1;
         int index = searchElement(array1, low, high, key);

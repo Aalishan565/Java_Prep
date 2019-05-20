@@ -1,4 +1,4 @@
-package genral;
+package array;
 
 public class MissingNumberInArray {
     public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class MissingNumberInArray {
         int missingNumber;
         int expectedSum = 0;
         int actualSum = 0;
-        expectedSum = totalNumber * (totalNumber + 1) / 2;
+        expectedSum =( totalNumber * (totalNumber + 1)) / 2;
         for (int i = 0; i < array.length; i++) {
             actualSum += array[i];
 

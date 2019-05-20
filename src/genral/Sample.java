@@ -1,93 +1,69 @@
 package genral;
 
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-abstract class A {
-    static void dat() {
-
-    }
-}
+import java.util.Random;
 
 public class Sample {
 
-public  static void m1(int position){
-    if (position>a.size()-1){
-        return;
+    public static void main(String[] args) {
+
+        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+            //i=arr[i]+i;
+            i=i+i;
+        }
+
+
+
+       /* for (int i = 0; i < 7; i++) {
+
+            Fiveton t = Fiveton.getIntance();
+            System.out.println(t);
+        }*/
+
     }
-    System.out.println(a.get(position));
-    m1(position+1);
 
 }
 
-   static ArrayList a= new ArrayList();
-    public static void main(String[] args) {
 
-       /* ListNode head = new ListNode(10);
-        ListNode second = new ListNode(5);
-        ListNode third = new ListNode(3);
-        ListNode fourth = new ListNode(2);
-        head.next = second;
-        second.next = third;
-        third.next = fourth;
+class Fiveton {
+    private static List<Fiveton> arr = new ArrayList<>();
+    private static int counter = 0;
 
-        //findLength(head);
-       ListNode head1= insertAtBegin(head, 9);
-       ListNode head2= insertAtLast(head, 24);
-        printList(head2);*/
-
-
+    private Fiveton() {
     }
 
-    private static class ListNode {
-        private ListNode next;
-        private int data;
+    ;
 
-        ListNode(int data) {
-            this.data = data;
-            this.next = null;
+    static {
+        for (int i = 0; i < 5; i++) {
+            arr.add(new Fiveton());
         }
-
+        System.out.println(arr);
     }
 
-    private static ListNode insertAtLast(ListNode head, int i) {
-        ListNode newNode = new ListNode(i);
-        ListNode current = head;
-        while (null != current.next) {
-            current = current.next;
+    public static Fiveton getIntance() {
+        if (counter == 5) {
+            counter = 0;
         }
-        current.next = newNode;
-        return head;
+        return arr.get(counter++);
+//        if(arr.size()==5){
+//            System.out.println(arr);
+//            Fiveton re = arr.get(new Random().nextInt(5));
+//            System.out.println(re);
+//            return re;
+//        }else{
+//            System.out.println("else");
+//            Fiveton obj = new Fiveton();
+//            int lenth = arr.size();
+//            arr.add(obj);
+//            return  obj;
+//        }
     }
-
-    private static ListNode insertAtBegin(ListNode head, int data) {
-        ListNode newNode = new ListNode(data);
-        if (head == null) {
-            return newNode;
-        }
-        newNode.next = head;
-        head = newNode;
-        return head;
-    }
-
-    private static void findLength(ListNode head) {
-        ListNode current = head;
-        int count = 0;
-        while (current != null) {
-            count++;
-            current = current.next;
-        }
-        System.out.println(count);
-    }
-
-    private static void printList(ListNode head) {
-        ListNode current = head;
-        while (current != null) {
-            System.out.println(current.data);
-            current = current.next;
-        }
-    }
-
 }
 
 

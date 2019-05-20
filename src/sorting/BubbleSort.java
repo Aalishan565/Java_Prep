@@ -2,12 +2,18 @@ package sorting;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 5, 6, 2, 1, 5, 4};
+        int array[] = {5,3,4,2};
         sortArray(array);
 
+       // printArray(array);
+    }
+
+    private static void printArray(int[] array) {
         for (int a : array) {
-            System.out.println(a);
+            System.out.print(a+",");
+
         }
+        System.out.println("\n");
     }
 
     private static void sortArray(int[] array) {
@@ -18,6 +24,7 @@ public class BubbleSort {
                     temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
+                    printArray(array);
                 }
             }
         }

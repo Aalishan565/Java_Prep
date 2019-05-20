@@ -2,7 +2,7 @@ package genral;
 
 public class NumberPalindrome {
     public static void main(String[] args) {
-        int number = 123;
+        int number = 121;
         int reminder = 0;
         int sum = 0;
         int temp = number;
