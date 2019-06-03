@@ -2,7 +2,7 @@ package array;
 
 public class ReverseArray {
     public static void main(String[] args) {
-        int array[] = {2, 3, 1, 4, 9, 8, 7, 6, 5};
+        int array[] = {2, 3, 1, 4, 9};
         reverseArray(array, 0, array.length - 1);
         for (int a : array) {
             System.out.println(a);
@@ -11,7 +11,7 @@ public class ReverseArray {
 
     private static void reverseArray(int[] array, int start, int end) {
 
-        if (start >= end) {
+        if (start > end) {
             return;
         } else {
             int temp;

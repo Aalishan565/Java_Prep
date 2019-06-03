@@ -3,14 +3,16 @@ package string_problems;
 public class RemoveDuplicateFromString {
 
     public static void main(String[] args) {
-        String input = "aabbccdd";
+        String input = "aalishan";
         String result = "";
-        for (int i = 0; i < input.length() - 1; i++) {
+        for (int i = 0; i < input.length(); i++) {
             if (!result.contains(String.valueOf(input.charAt(i)))) {
                 result += String.valueOf(input.charAt(i));
             }
         }
         System.out.println(result);
+       // System.out.println(result.charAt(result.length()-1));
     }
+
 
 }

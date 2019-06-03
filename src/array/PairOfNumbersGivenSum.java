@@ -24,7 +24,6 @@ public class PairOfNumbersGivenSum {
         System.out.println(pointer1);
         System.out.println(pointer2);
     }
-
     static boolean pairUsingBinary(int[] array, int left, int right, int sum) {
         while (left < right) {
             if (array[left] + array[right] == sum) {

@@ -11,8 +11,8 @@ public class RemoveDuplicateFromSortedArray {
     }
 
     private static int[] removeDuplicate(int[] array) {
-        int i = 1;
         int j = 0;
+        int i = 1;
         if (array.length < 2) {
             return array;
         }

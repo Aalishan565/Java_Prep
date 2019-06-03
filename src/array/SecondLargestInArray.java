@@ -2,7 +2,7 @@ package array;
 
 public class SecondLargestInArray {
     public static void main(String[] args) {
-        int array[] = {1, 5, 3, 7, 8, 9, 8, 7, 2};
+        int array[] = {1, 5, 3, 7, 8, 9, 8, 7, 7};
         int largest = array[0];
         int secondLargest = largest;
         for (int i = 0; i < array.length; i++) {
@@ -10,7 +10,7 @@ public class SecondLargestInArray {
                 secondLargest = largest;
                 largest = array[i];
 
-            } else if (array[i] > secondLargest) {
+            } else if (array[i] > secondLargest && array[i] != largest) {
                 secondLargest = array[i];
             }
         }
