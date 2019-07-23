@@ -4,8 +4,8 @@ public class MergeTwoSortedArray {
     //if length is different complexity o(m+n)
     //if length is same complexity o(2n)
     public static void main(String[] args) {
-        int array1[] = {1, 2, 3, 4, 5, 6};
-        int array2[] = {2, 2, 3, 4, 5, 7};
+        int array1[] = {1, 2, 3, 4, 5, 6,10};
+        int array2[] = {2, 2, 3, 4, 5, 7,8,9};
         int result[] = mergeArrays(array1, array2);
         for (int a : result) {
             System.out.println(a);

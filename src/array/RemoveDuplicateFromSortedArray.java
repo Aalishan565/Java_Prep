@@ -2,7 +2,7 @@ package array;
 
 public class RemoveDuplicateFromSortedArray {
     public static void main(String[] args) {
-        int array[] = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 5};
+        int array[] = {1, 1, 2, 2, 3};
         int newArray[] = removeDuplicate(array);
 
         for (int a : newArray) {

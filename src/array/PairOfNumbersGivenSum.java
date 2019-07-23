@@ -18,6 +18,7 @@ public class PairOfNumbersGivenSum {
             for (int j = 0; j < array.length; j++) {
                 if (difference == array[j]) {
                     pointer2 = array[j];
+                    break;
                 }
             }
         }

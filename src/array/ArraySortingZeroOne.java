@@ -2,7 +2,8 @@ package array;
 
 public class ArraySortingZeroOne {
     public static void main(String[] args) {
-        int arr[] = {0, 1, 1, 0, 0, 8};
+        //int arr[] = {0, 1, 1, 0,1 ,1,1,0,0, 1};
+        int arr[] = {0, 1, 2, 0,1 ,6,1,0,0, 7};
         int firstPtr = 0;
         int lastPtr = arr.length - 1;
         // int arr1[] = sortArray(arr, firstPtr, lastPtr);

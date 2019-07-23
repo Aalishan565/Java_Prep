@@ -1,4 +1,4 @@
-package genral;
+package searching;
 
 public class BinarySearchAlgo {
     public static void main(String[] args) {
@@ -18,7 +18,6 @@ public class BinarySearchAlgo {
             } else {
                 return searchElementWithRecursion(array, mid + 1, end, key);
             }
-
         }
         return -1;
     }
