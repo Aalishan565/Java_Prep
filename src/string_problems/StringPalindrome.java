@@ -2,7 +2,7 @@ package string_problems;
 
 public class StringPalindrome {
     public static void main(String[] args) {
-        String input = "kaak";
+        String input = "kabak";
         int i = 0;
         int begin = 0;
         int end = input.length() - 1;

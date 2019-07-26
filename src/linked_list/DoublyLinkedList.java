@@ -4,16 +4,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class DoublyLinkedList {
-    public static void main(String[] args) {
-        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
-        doublyLinkedList.insertNodeAtBeginning(3);
-        doublyLinkedList.insertNodeAtBeginning(2);
-        doublyLinkedList.deleteHead();
-        doublyLinkedList.displayForward();
-        // doublyLinkedList.displayBackward();
-
-    }
-
     class ListNode {
         int data;
         ListNode next;
@@ -32,6 +22,16 @@ public class DoublyLinkedList {
         this.length = 0;
         this.head = null;
         this.tail = null;
+    }
+
+    public static void main(String[] args) {
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        doublyLinkedList.insertNodeAtBeginning(3);
+        doublyLinkedList.insertNodeAtBeginning(2);
+        doublyLinkedList.deleteHead();
+        doublyLinkedList.displayForward();
+        // doublyLinkedList.displayBackward();
+
     }
 
     public boolean isEmpty() {
