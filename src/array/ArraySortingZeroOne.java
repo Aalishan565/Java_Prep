@@ -2,13 +2,13 @@ package array;
 
 public class ArraySortingZeroOne {
     public static void main(String[] args) {
-        //int arr[] = {0, 1, 1, 0,1 ,1,1,0,0, 1};
-        int arr[] = {0, 1, 2, 0, 1, 6, 1, 0, 0, 7};
+        int arr[] = {0, 1, 1, 0, 1, 1, 1, 0, 0, 1};
+        // int arr[] = {0, 1, 2, 0, 1, 6, 1, 0, 0, 7};
         int firstPtr = 0;
         int lastPtr = arr.length - 1;
-        // int arr1[] = sortArray(arr, firstPtr, lastPtr);
-        int arr1[] = sortArray(arr);
-        for (int i = 0; i <= arr1.length - 1; i++) {
+        int arr1[] = sortArray(arr, firstPtr, lastPtr);
+        // int arr1[] = sortArray(arr);
+        for (int i = 0; i < arr1.length; i++) {
             System.out.println(arr1[i]);
         }
     }

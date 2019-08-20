@@ -61,8 +61,10 @@ public class SinglyLinkedList {
         // printLinkedList(newList);
 
         //find the nth element from last in linked list
-        ListNode element = findTheElement(head, 1);
-        System.out.println(element.data);
+        //  ListNode element = findTheElement(head, 1);
+        //  System.out.println(element.data);
+        ListNode reverseList = reverserListUsingRecursion(head);
+        printLinkedList(reverseList);
     }
 
     private static ListNode findTheElement(ListNode head, int position) {
@@ -89,6 +91,16 @@ public class SinglyLinkedList {
             current = nextNode;
         }
         return previous;
+    }
+
+    private static ListNode reverserListUsingRecursion(ListNode node) {
+        if (node == null || node.next == null) {
+            return node;
+        }
+        ListNode reverseNode = reverserListUsingRecursion(node.next);
+        node.next.next = node;
+        node.next = null;
+        return reverseNode;
     }
 
     private static ListNode middleElement(ListNode head) {

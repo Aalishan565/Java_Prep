@@ -3,7 +3,7 @@ package array;
 public class ReversalArrayRotation {
     public static void main(String[] args) {
         int array[] = {1, 2, 4, 3, 5, 6, 7, 8, 9};
-        int reverseby = 7;
+        int reverseby = 1;
         int length = array.length - 1;
         int difference = length - reverseby;
         int firstStart = 0;

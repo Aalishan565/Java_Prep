@@ -3,27 +3,34 @@ package array;
 public class PairOfNumbersGivenSum {
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 5, 7, 8, 9};
-        int sum = 17;
-        //pairWithLoops(array, sum);
+        int sum = 12;
+       // pairWithLoops(array, sum);
         //for binary array must be sorted
         System.out.println(pairUsingBinary(array, 0, array.length - 1, sum));
     }
 
     private static void pairWithLoops(int[] array, int sum) {
-        int pointer1 = array[0];
-        int pointer2 = array[0];
+        int firstNumber = 0;
+        int secondNumber = 0;
+        int diff = 0;
         for (int i = 0; i < array.length; i++) {
-            pointer1 = array[i];
-            int difference = sum - pointer1;
+            if (sum == (firstNumber + secondNumber)) {
+                System.out.println(firstNumber);
+                System.out.println(secondNumber);
+                return;
+            }
+            firstNumber = array[i];
+            diff = sum - firstNumber;
             for (int j = 0; j < array.length; j++) {
-                if (difference == array[j]) {
-                    pointer2 = array[j];
+                if (diff == array[j]) {
+                    secondNumber = array[j];
                     break;
+
                 }
             }
+
         }
-        System.out.println(pointer1);
-        System.out.println(pointer2);
+        System.out.println("No match found");
     }
     static boolean pairUsingBinary(int[] array, int left, int right, int sum) {
         while (left < right) {
