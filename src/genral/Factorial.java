@@ -4,16 +4,14 @@ public class Factorial {
     public static void main(String[] args) {
         int number = 5;
         //factorialUsingLoop(number);
-        System.out.println(factorialUsingRecurssion(number));
+        System.out.println(factorialUsingRecursion(number));
     }
 
-    private static int factorialUsingRecurssion(int fact) {
+    private static int factorialUsingRecursion(int fact) {
         if (fact == 0) {
             return 1;
-        } else {
-            fact = fact * factorialUsingRecurssion(fact - 1);
-
         }
+        fact = fact * factorialUsingRecursion(fact - 1);
         return fact;
     }
 

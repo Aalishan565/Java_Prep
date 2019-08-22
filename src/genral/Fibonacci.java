@@ -10,16 +10,16 @@ public class Fibonacci {
         System.out.println(first);
         System.out.println(second);
          fibonacciUsingForLoop(number);
-       // fibonacciUsingRecurssion(number - 2);
+       // fibonacciUsingRecursion(number - 2);
     }
 
-    private static void fibonacciUsingRecurssion(int number) {
+    private static void fibonacciUsingRecursion(int number) {
         if (number > 0) {
             nextNumber = first + second;
             System.out.println(nextNumber);
             first = second;
             second = nextNumber;
-            fibonacciUsingRecurssion(number - 1);
+            fibonacciUsingRecursion(number - 1);
         }
     }
 

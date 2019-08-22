@@ -19,7 +19,6 @@ public class ZigZagArray {
                 }
             } else {
                 if (array[i] < array[i + 1]) {
-                    // swap
                     swap(array, i);
                 }
             }

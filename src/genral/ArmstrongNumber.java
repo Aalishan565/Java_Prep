@@ -14,9 +14,9 @@ public class ArmstrongNumber {
             number = number / 10;
         }
         if (sum == temp) {
-            System.out.println("number is armstrong");
+            System.out.println("number is armstrong " + sum);
         } else {
-            System.out.println("Number is not armstrong");
+            System.out.println("Number is not armstrong " + sum);
         }
     }
 }
