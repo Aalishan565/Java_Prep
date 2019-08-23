@@ -1,5 +1,7 @@
 package tree;
 
+import java.util.LinkedList;
+
 public class BinaryTree {
     private TreeNode root;
 
@@ -40,6 +42,26 @@ public class BinaryTree {
         postOrder(root.left);
         postOrder(root.right);
         System.out.print(root.data + " ");
+
+    }
+
+    public void levelOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        java.util.Queue<TreeNode> queue = new LinkedList();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.println(node.data);
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+
+        }
 
     }
 
@@ -112,7 +134,8 @@ public class BinaryTree {
         ;
         // System.out.println(binaryTree.searchData(binaryTree.root, 29));
         // System.out.println(binaryTree.sumOfTree(binaryTree.root));
-        System.out.println(binaryTree.numberOfNodes(binaryTree.root));
+        binaryTree.levelOrder(binaryTree.root);
+        //System.out.println(binaryTree.numberOfNodes(binaryTree.root));
 
 
     }

@@ -11,14 +11,14 @@ public class MergeSort {
     }
 
     private static void sortArray(int[] array) {
-        devideArray(array, 0, array.length - 1);
+        divideArray(array, 0, array.length - 1);
     }
 
-    private static void devideArray(int[] array, int low, int high) {
+    private static void divideArray(int[] array, int low, int high) {
         if (low < high) {
             int mid = (low + high) / 2;
-            devideArray(array, low, mid);
-            devideArray(array, mid + 1, high);
+            divideArray(array, low, mid);
+            divideArray(array, mid + 1, high);
             mergeArray(array, low, mid, high);
 
 

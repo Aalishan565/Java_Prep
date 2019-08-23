@@ -3,6 +3,8 @@ package linked_list;
 
 import com.sun.istack.internal.NotNull;
 
+import java.util.List;
+
 
 public class SinglyLinkedList {
     public static void main(String[] args) {
@@ -10,11 +12,17 @@ public class SinglyLinkedList {
         ListNode second = new ListNode(3);
         ListNode third = new ListNode(4);
         ListNode fourth = new ListNode(5);
-        ListNode fifth = new ListNode(7);
+        ListNode fifth = new ListNode(5);
+        ListNode sixth = new ListNode(7);
+        ListNode seven = new ListNode(7);
+        ListNode eight = new ListNode(7);
         head.next = second;
         second.next = third;
         third.next = fourth;
         fourth.next = fifth;
+        fifth.next = sixth;
+        sixth.next = seven;
+        seven.next = eight;
         //fourth.next=third;
 
         //printing the linked list
@@ -63,8 +71,22 @@ public class SinglyLinkedList {
         //find the nth element from last in linked list
         //  ListNode element = findTheElement(head, 1);
         //  System.out.println(element.data);
-        ListNode reverseList = reverserListUsingRecursion(head);
-        printLinkedList(reverseList);
+        //  ListNode reverseList = reverserListUsingRecursion(head);
+        ListNode node = removeDuplicate(head);
+        printLinkedList(node);
+    }
+
+    private static ListNode removeDuplicate(ListNode head) {
+        ListNode current = head;
+        while (current != null && current.next != null) {
+            if (current.data == current.next.data) {
+                current.next = current.next.next;
+            } else {
+                current = current.next;
+            }
+        }
+        return head;
+
     }
 
     private static ListNode findTheElement(ListNode head, int position) {
