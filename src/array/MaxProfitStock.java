@@ -12,6 +12,7 @@ public class MaxProfitStock {
         int profit = 0;
         int difference;
 
+
         for (int i = 1; i < stockPrices.length; i++) {
             if (minStockPrice > stockPrices[i]) {
                 difference = maxStockPrice - minStockPrice;
@@ -19,7 +20,7 @@ public class MaxProfitStock {
                 minStockPrice = stockPrices[i];
                 maxStockPrice = stockPrices[i];
             } else if (maxStockPrice < stockPrices[i]) {
-                System.out.println(maxStockPrice);
+                maxStockPrice = stockPrices[i];
             }
 
         }

@@ -12,6 +12,8 @@ public class MaximumPlateform {
         Arrays.sort(departure);
         for (int i = 0, j = 0; i < arrival.length;) {
             if (arrival[i] < departure[j]) {
+                System.out.println(i +" i "+arrival[i]);
+                System.out.println(j +" j "+departure[j]);
                 count++;
                 i++;
                 if (count > max_count) {

@@ -2,12 +2,12 @@ package array;
 
 public class ArraySortingZeroOne {
     public static void main(String[] args) {
-        int arr[] = {0, 1, 1, 0, 1, 1, 1, 0, 0, 1};
+        int arr[] = {0, 1,2, 1, 0, 2,1, 1, 1, 0, 0, 1,2};
         // int arr[] = {0, 1, 2, 0, 1, 6, 1, 0, 0, 7};
         int firstPtr = 0;
         int lastPtr = arr.length - 1;
-        int arr1[] = sortArray(arr, firstPtr, lastPtr);
-        // int arr1[] = sortArray(arr);
+      //  int arr1[] = sortArrayZeroOneTwo(arr, firstPtr, lastPtr);
+         int arr1[] = sortArray(arr);
         for (int i = 0; i < arr1.length; i++) {
             System.out.println(arr1[i]);
         }
@@ -47,4 +47,40 @@ public class ArraySortingZeroOne {
         }
         return arr;
     }
+
+    private static int[] sortArrayZeroOneTwo(int[] arr, int firstPtr, int lastPtr) {
+        int mid = firstPtr;
+        while (mid <= lastPtr) {
+            switch (arr[mid]) {
+                case 0:
+                    if (arr[firstPtr] != arr[mid]) {
+                        int temp = arr[firstPtr];
+                        arr[firstPtr] = arr[mid];
+                        arr[mid] = temp;
+
+                    }
+                    firstPtr++;
+                    mid++;
+                    break;
+                case 1:
+                    mid++;
+                    break;
+                case 2:
+                    if (arr[mid] != arr[lastPtr]) {
+                        int temp = arr[mid];
+                        arr[mid] = arr[lastPtr];
+                        arr[lastPtr] = temp;
+
+
+                    }
+                    lastPtr--;
+                    break;
+
+
+            }
+
+        }
+        return arr;
+    }
+
 }

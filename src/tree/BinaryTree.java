@@ -65,6 +65,53 @@ public class BinaryTree {
 
     }
 
+    public int height(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = height(root.left);
+        int right = height(root.right);
+        if (left > right) {
+            return 1 + left;
+        } else {
+            return 1 + right;
+        }
+    }
+
+    public void bsf(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        java.util.Queue<TreeNode> queue = new LinkedList();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.println(node.data);
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+
+        }
+
+    }
+
+    public void dfs(TreeNode node) {
+        if (root == null) {
+            return;
+        }
+        System.out.println(node.data);
+        if (node.left != null) {
+            dfs(node.left);
+        }
+        if (node.right != null) {
+            dfs(node.right);
+        }
+    }
+
+
     public void createStaticTree() {
         TreeNode first = new TreeNode(9);
         TreeNode second = new TreeNode(2);
@@ -117,6 +164,21 @@ public class BinaryTree {
         }
         return false;
     }
+    public TreeNode mirrorImage(TreeNode node) {
+        if (node==null){
+            return null;
+        }
+        TreeNode temp=node.left;
+        node.left=node.right;
+        node.right=temp;
+        if (node.left!=null){
+            mirrorImage(node.left);
+        }
+        if (node.right!=null){
+            mirrorImage(node.right);
+        }
+        return node;
+    }
 
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
@@ -134,7 +196,9 @@ public class BinaryTree {
         ;
         // System.out.println(binaryTree.searchData(binaryTree.root, 29));
         // System.out.println(binaryTree.sumOfTree(binaryTree.root));
-        binaryTree.levelOrder(binaryTree.root);
+        //binaryTree.height(binaryTree.root);
+       TreeNode node=binaryTree.mirrorImage(binaryTree.root);
+        binaryTree.preOrder(node);
         //System.out.println(binaryTree.numberOfNodes(binaryTree.root));
 
 
