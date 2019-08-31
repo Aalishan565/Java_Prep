@@ -2,12 +2,12 @@ package array;
 
 public class ArraySortingZeroOne {
     public static void main(String[] args) {
-        int arr[] = {0, 1,2, 1, 0, 2,1, 1, 1, 0, 0, 1,2};
+        int arr[] = {2, 1, 2, 1, 0, 2, 1, 1, 1, 0, 0, 1, 2};
         // int arr[] = {0, 1, 2, 0, 1, 6, 1, 0, 0, 7};
         int firstPtr = 0;
         int lastPtr = arr.length - 1;
-      //  int arr1[] = sortArrayZeroOneTwo(arr, firstPtr, lastPtr);
-         int arr1[] = sortArray(arr);
+        //  int arr1[] = sortArrayZeroOneTwo(arr, firstPtr, lastPtr);
+        int arr1[] = sortArray(arr);
         for (int i = 0; i < arr1.length; i++) {
             System.out.println(arr1[i]);
         }
@@ -15,7 +15,13 @@ public class ArraySortingZeroOne {
 
     private static int[] sortArray(int[] arr) {
         int j = 0;
-        for (int i = 1; i <= arr.length - 1; i++) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                j = i;
+                break;
+            }
+        }
+        for (int i = j + 1; i <= arr.length - 1; i++) {
             if (arr[j] == 0 && arr[i] != 0) {
                 int temp = arr[j];
                 arr[j] = arr[i];
@@ -35,7 +41,6 @@ public class ArraySortingZeroOne {
                 firstPtr++;
             } else if (arr[lastPtr] == 1) {
                 lastPtr--;
-
             } else {
                 int temp = arr[firstPtr];
                 arr[firstPtr] = arr[lastPtr];
@@ -43,7 +48,6 @@ public class ArraySortingZeroOne {
                 firstPtr++;
                 lastPtr--;
             }
-
         }
         return arr;
     }
@@ -57,7 +61,6 @@ public class ArraySortingZeroOne {
                         int temp = arr[firstPtr];
                         arr[firstPtr] = arr[mid];
                         arr[mid] = temp;
-
                     }
                     firstPtr++;
                     mid++;
@@ -70,13 +73,9 @@ public class ArraySortingZeroOne {
                         int temp = arr[mid];
                         arr[mid] = arr[lastPtr];
                         arr[lastPtr] = temp;
-
-
                     }
                     lastPtr--;
                     break;
-
-
             }
 
         }

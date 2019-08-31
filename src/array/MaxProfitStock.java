@@ -2,7 +2,7 @@ package array;
 
 public class MaxProfitStock {
     public static void main(String[] args) {
-        int stockPrices[] = {100, 30, 15, 10, 8, 25, 80};
+        int stockPrices[] = {2, 30, 15, 10, 8, 25, 80};
         calculateProfit(stockPrices);
     }
 

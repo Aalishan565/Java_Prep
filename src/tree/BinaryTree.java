@@ -111,7 +111,6 @@ public class BinaryTree {
         }
     }
 
-
     public void createStaticTree() {
         TreeNode first = new TreeNode(9);
         TreeNode second = new TreeNode(2);
@@ -150,7 +149,6 @@ public class BinaryTree {
         return 1 + numberOfNodes(node.left) + numberOfNodes(node.right);
     }
 
-
     public boolean searchData(TreeNode node, int key) {
         if (node == null) {
             return false;
@@ -164,6 +162,7 @@ public class BinaryTree {
         }
         return false;
     }
+
     public TreeNode mirrorImage(TreeNode node) {
         if (node==null){
             return null;
@@ -193,7 +192,6 @@ public class BinaryTree {
         binaryTree.root = binaryTree.addNode(binaryTree.root, 30);
         binaryTree.root = binaryTree.addNode(binaryTree.root, 40);
         //binaryTree.inOrder(binaryTree.root);
-        ;
         // System.out.println(binaryTree.searchData(binaryTree.root, 29));
         // System.out.println(binaryTree.sumOfTree(binaryTree.root));
         //binaryTree.height(binaryTree.root);

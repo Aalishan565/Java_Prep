@@ -3,7 +3,7 @@ package array;
 public class ReversalArrayRotation {
     public static void main(String[] args) {
         int array[] = {1, 2, 4, 3, 5, 6, 7, 8, 9};
-        int reverseby = 1;
+        int reverseby = 5;
         int length = array.length - 1;
         int difference = length - reverseby;
         int firstStart = 0;
@@ -15,7 +15,6 @@ public class ReversalArrayRotation {
         reverseWholeArray(array, firstStart, lastEnd);
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
-
         }
     }
 
@@ -28,5 +27,4 @@ public class ReversalArrayRotation {
             lastEnd--;
         }
     }
-
 }

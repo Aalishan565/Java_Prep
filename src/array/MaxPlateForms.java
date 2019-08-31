@@ -2,18 +2,16 @@ package array;
 
 import java.util.Arrays;
 
-public class MaximumPlateform {
+public class MaxPlateForms {
     public static void main(String[] args) {
-        int arrival[] = {1, 3, 7, 8};
-        int departure[] = {2, 5, 7, 9};
+        int arrival[] = {1, 3, 4, 7, 8};
+        int departure[] = {2, 5, 6, 7, 9};
         int max_count = 0;
         int count = 0;
         Arrays.sort(arrival);
         Arrays.sort(departure);
-        for (int i = 0, j = 0; i < arrival.length;) {
+        for (int i = 0, j = 0; i < arrival.length; ) {
             if (arrival[i] < departure[j]) {
-                System.out.println(i +" i "+arrival[i]);
-                System.out.println(j +" j "+departure[j]);
                 count++;
                 i++;
                 if (count > max_count) {
@@ -23,7 +21,6 @@ public class MaximumPlateform {
                 count--;
                 j++;
             }
-
         }
         System.out.println(max_count);
     }
