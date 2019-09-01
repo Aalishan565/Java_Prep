@@ -7,15 +7,29 @@ import java.util.List;
 
 
 public class SinglyLinkedList {
+
+    static class ListNode {
+        int data;
+        ListNode next;
+
+        public ListNode(int data) {
+            this.data = data;
+            this.next = null;
+        }
+
+
+    }
+
     public static void main(String[] args) {
         ListNode head = new ListNode(2);
         ListNode second = new ListNode(3);
         ListNode third = new ListNode(4);
         ListNode fourth = new ListNode(5);
-        ListNode fifth = new ListNode(5);
+        ListNode fifth = new ListNode(6);
         ListNode sixth = new ListNode(7);
-        ListNode seven = new ListNode(7);
-        ListNode eight = new ListNode(7);
+        ListNode seven = new ListNode(8);
+        ListNode eight = new ListNode(9);
+
         head.next = second;
         second.next = third;
         third.next = fourth;
@@ -23,7 +37,6 @@ public class SinglyLinkedList {
         fifth.next = sixth;
         sixth.next = seven;
         seven.next = eight;
-        //fourth.next=third;
 
         //printing the linked list
         // printLinkedList(head);
@@ -33,11 +46,11 @@ public class SinglyLinkedList {
         //System.out.println(length);
 
         //insert Element at beginning
-        // DoublyLinkedList newHead = insertElementAtBeginning(head, 6);
+        // ListNode newHead = insertElementAtBeginning(head, 6);
         // printLinkedList(newHead);
 
         //insert Element at last
-        //  DoublyLinkedList newList = insertAtLast(head, 9);
+        //ListNode newList = insertAtLast(head, 9);
         //printLinkedList(newList);
 
         //add node after given node
@@ -49,11 +62,11 @@ public class SinglyLinkedList {
         //printLinkedList(head);
 
         //delete the head node
-        //DoublyLinkedList newList = deleteHead(head);
+        // ListNode newList = deleteHead(head);
         //printLinkedList(newList);
 
         //delete last node
-        //DoublyLinkedList newList = deleteLastNode(head);
+        // ListNode newList = deleteLastNode(head);
         //printLinkedList(newList);
 
         //detect loop in linked list
@@ -61,19 +74,83 @@ public class SinglyLinkedList {
         // System.out.println(isLoopExist);
 
         //find the middle element of linkedlist
-        //DoublyLinkedList middleElement = middleElement(head);
+        // ListNode middleElement = middleElement(head);
         //System.out.println(middleElement.data);
 
         //reverse linked list
-        // DoublyLinkedList newList = reverserList(head);
+        // ListNode reverseList = reverserList(head);
+        //  ListNode reverseList = reverserListUsingRecursion(head);
         // printLinkedList(newList);
 
         //find the nth element from last in linked list
-        //  ListNode element = findTheElement(head, 1);
+        //  ListNode element = findNthElement(head, 6);
         //  System.out.println(element.data);
-        //  ListNode reverseList = reverserListUsingRecursion(head);
-        ListNode node = removeDuplicate(head);
-        printLinkedList(node);
+
+        //Remove duplicate from linkedList
+        //  ListNode node = removeDuplicate(head);
+        //  printLinkedList(node);
+
+        //Insert node in sorted LinkedList
+        //insertElementInSortedList(head, 6);
+        // printLinkedList(head);
+
+        //Intersection point of two linkedList
+        //  ListNode point = getIntersectionPoint(head, fourth);
+        // System.out.println(point.data);
+        printFromEnd(head);
+
+    }
+
+    private static void printFromEnd(ListNode head) {
+        if (head == null) {
+            return;
+        }
+        printFromEnd(head.next);
+        System.out.println(head.data);
+    }
+
+    private static ListNode getIntersectionPoint(ListNode first, ListNode second) {
+        int l1 = getLinkedListLength(first);
+        int l2 = getLinkedListLength(second);
+        int diff = 0;
+        if (l1 > l2) {
+            diff = l1 - l2;
+            for (int i = 0; i < diff; i++) {
+                first = first.next;
+            }
+            while (first.next != null && second.next != null) {
+                first = first.next;
+                second = second.next;
+                if (first == second) {
+                    return first;
+                }
+            }
+        } else {
+            diff = l2 - l1;
+            for (int i = 0; i < diff; i++) {
+                first = first.next;
+            }
+            while (first.next != null && second.next != null) {
+                first = first.next;
+                second = second.next;
+                if (first == second) {
+                    return first;
+                }
+            }
+
+
+        }
+        return null;
+    }
+
+    private static void insertElementInSortedList(ListNode head, int data) {
+        ListNode listNode = new ListNode(data);
+        ListNode currentNode = head;
+        while (currentNode.next != null && currentNode.next.data < listNode.data) {
+            currentNode = currentNode.next;
+        }
+        listNode.next = currentNode.next;
+        currentNode.next = listNode;
     }
 
     private static ListNode removeDuplicate(ListNode head) {
@@ -89,7 +166,7 @@ public class SinglyLinkedList {
 
     }
 
-    private static ListNode findTheElement(ListNode head, int position) {
+    private static ListNode findNthElement(ListNode head, int position) {
         ListNode fastPointer = head;
         ListNode slowPointer = head;
         for (int i = 0; i < position; i++) {
@@ -223,15 +300,4 @@ public class SinglyLinkedList {
         }
     }
 
-    static class ListNode {
-        int data;
-        ListNode next;
-
-        public ListNode(int data) {
-            this.data = data;
-            this.next = null;
-        }
-
-
-    }
 }

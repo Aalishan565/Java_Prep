@@ -4,6 +4,11 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class DoublyLinkedList {
+
+    private ListNode head;
+    private ListNode tail;
+    private int length;
+
     class ListNode {
         int data;
         ListNode next;
@@ -14,9 +19,6 @@ public class DoublyLinkedList {
         }
     }
 
-    ListNode head;
-    ListNode tail;
-    int length;
 
     DoublyLinkedList() {
         this.length = 0;
