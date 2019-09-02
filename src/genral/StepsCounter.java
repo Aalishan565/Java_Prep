@@ -2,7 +2,7 @@ package genral;
 
 public class StepsCounter {
     public static void main(String[] args) {
-        int n = 8;
+        int n = 3;
         int steps = d(n);
         System.out.println(steps);
 

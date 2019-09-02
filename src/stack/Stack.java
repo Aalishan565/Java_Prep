@@ -21,13 +21,13 @@ public class Stack {
         ListNode top;
         ListNode next;
 
+        public ListNode() {
+
+        }
+
         ListNode(int data) {
             this.data = data;
             this.next = null;
-        }
-
-        public ListNode() {
-
         }
 
         void push(int data) {
@@ -35,6 +35,19 @@ public class Stack {
             temp.next = top;
             top = temp;
             length++;
+        }
+
+        public void pop() {
+            if (isEmpty()) {
+                return;
+            }
+            top = top.next;
+            length--;
+
+        }
+
+        public ListNode peek() {
+            return top;
         }
 
         boolean isEmpty() {
@@ -53,17 +66,5 @@ public class Stack {
 
         }
 
-        public void pop() {
-            if (isEmpty()) {
-                return;
-            }
-            top = top.next;
-            length--;
-
-        }
-
-        public ListNode peek() {
-            return top;
-        }
     }
 }

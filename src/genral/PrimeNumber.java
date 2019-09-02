@@ -6,7 +6,6 @@ public class PrimeNumber {
         allPrimeNumbers(limit);
        // System.out.println(isPrimeNumber(3));
     }
-
     private static void allPrimeNumbers(int limit) {
         for (int i = 1; i <= limit; i++) {
             boolean isPrime = true;

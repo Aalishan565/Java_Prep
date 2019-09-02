@@ -2,7 +2,6 @@ package genral;
 
 public class ArmstrongNumber {
 
-
     public static void main(String[] args) {
         int number = 153;
         int temp = number;
