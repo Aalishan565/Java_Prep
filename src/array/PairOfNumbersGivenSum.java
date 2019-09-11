@@ -1,12 +1,15 @@
 package array;
 
+import java.util.HashMap;
+
 public class PairOfNumbersGivenSum {
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 5, 7, 8, 9};
-        int sum = 12;
-       // pairWithLoops(array, sum);
+        int sum = 9;
+        // pairWithLoops(array, sum);
         //for binary array must be sorted
-        System.out.println(pairUsingBinary(array, 0, array.length - 1, sum));
+    //    System.out.println(pairUsingBinary(array, 0, array.length - 1, sum));
+        pairUsingHash(array,sum);
     }
 
     private static void pairWithLoops(int[] array, int sum) {
@@ -32,7 +35,8 @@ public class PairOfNumbersGivenSum {
         }
         System.out.println("No match found");
     }
-    static boolean pairUsingBinary(int[] array, int left, int right, int sum) {
+
+    private static boolean pairUsingBinary(int[] array, int left, int right, int sum) {
         while (left < right) {
             if (array[left] + array[right] == sum) {
                 System.out.println(array[left]);
@@ -47,4 +51,24 @@ public class PairOfNumbersGivenSum {
         return false;
 
     }
+
+    private static void pairUsingHash(int[] array, int sum) {
+        HashMap<Integer,Integer> hm= new HashMap();
+        for (int i = 0; i < array.length; i++) {
+            if (hm.containsKey(sum-array[i])){
+                int pair=hm.get(sum-array[i]);
+               System.out.println(array[pair]);
+                System.out.println(array[i]);
+                return;
+            }else {
+                hm.put(array[i],i);
+            }
+
+
+        }
+       // System.out.println(hm.entrySet());
+        System.out.println("No pair found");
+
+    }
+
 }

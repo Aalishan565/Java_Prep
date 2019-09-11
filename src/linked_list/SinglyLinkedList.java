@@ -1,10 +1,8 @@
 package linked_list;
 
-
 import com.sun.istack.internal.NotNull;
 
 import java.util.List;
-
 
 public class SinglyLinkedList {
 
@@ -16,19 +14,18 @@ public class SinglyLinkedList {
             this.data = data;
             this.next = null;
         }
-
-
     }
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(2);
-        ListNode second = new ListNode(3);
-        ListNode third = new ListNode(4);
-        ListNode fourth = new ListNode(5);
-        ListNode fifth = new ListNode(6);
-        ListNode sixth = new ListNode(7);
-        ListNode seven = new ListNode(8);
-        ListNode eight = new ListNode(9);
+        ListNode head = new ListNode(1);
+        ListNode second = new ListNode(2);
+        ListNode third = new ListNode(3);
+        ListNode fourth = new ListNode(4);
+        ListNode fifth = new ListNode(5);
+        ListNode sixth = new ListNode(6);
+        ListNode seven = new ListNode(7);
+        ListNode eight = new ListNode(8);
+        ListNode nine = new ListNode(9);
 
         head.next = second;
         second.next = third;
@@ -37,6 +34,7 @@ public class SinglyLinkedList {
         fifth.next = sixth;
         sixth.next = seven;
         seven.next = eight;
+        eight.next = nine;
 
         //printing the linked list
         // printLinkedList(head);
@@ -97,7 +95,47 @@ public class SinglyLinkedList {
         //Intersection point of two linkedList
         //  ListNode point = getIntersectionPoint(head, fourth);
         // System.out.println(point.data);
-        printFromEnd(head);
+
+        // reverse printing linked list
+        // printFromEnd(head);
+
+        ListNode he = segrigateListEvenOdd(head);
+        printLinkedList(he);
+    }
+
+    private static ListNode segrigateListEvenOdd(ListNode node) {
+        if (node == null) {
+            return node;
+        }
+        ListNode odd = node;
+        ListNode even = odd.next;
+        ListNode evenFirst = even;
+
+        while (1 == 1) {
+            // If there are no more nodes,
+            // then connect first node of even
+            // list to the last node of odd list
+            if (odd == null || even == null || even.next == null) {
+                odd.next = evenFirst;
+                break;
+
+            }
+            // Connecting odd nodes
+            odd.next = even.next;
+            odd = even.next;
+
+            // If there are NO more even nodes
+            // after current odd.
+            if (odd.next == null) {
+                even.next = null;
+                odd.next = evenFirst;
+                break;
+            }
+            // Connecting even nodes
+            even.next = odd.next;
+            even = odd.next;
+        }
+        return node;
 
     }
 

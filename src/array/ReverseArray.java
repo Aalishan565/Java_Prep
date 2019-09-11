@@ -10,7 +10,6 @@ public class ReverseArray {
     }
 
     private static void reverseArray(int[] array, int start, int end) {
-
         if (start > end) {
             return;
         } else {
