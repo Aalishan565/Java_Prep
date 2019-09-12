@@ -1,6 +1,8 @@
 package tree;
 
-import java.util.LinkedList;
+import org.omg.PortableInterceptor.INACTIVE;
+
+import java.util.*;
 
 public class BinaryTree {
     private TreeNode root;
@@ -14,6 +16,11 @@ public class BinaryTree {
             this.data = data;
         }
     }
+
+    private static Map<Integer, List<Integer>> mapVerticalDistance = null;
+    public static TreeMap<Integer, Integer> ht = new TreeMap<>();
+    ;
+    private static List<Integer> list;
 
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
@@ -42,9 +49,11 @@ public class BinaryTree {
         // System.out.println(binaryTree.maxElement(binaryTree.root));
         //  binaryTree.deleteNode(binaryTree.root, 3);
         // binaryTree.levelOrder(binaryTree.root);
-        System.out.println(binaryTree.minimumDepth(binaryTree.root));
-
-
+        //  binaryTree.verticalOrderOfBTree(binaryTree.root);
+        // binaryTree.diameterOfTree(binaryTree.root);
+        //  System.out.println(binaryTree.minimumDepth(binaryTree.root));
+        // System.out.println(binaryTree.diameterOfTree(binaryTree.root));
+        binaryTree.bottomView(binaryTree.root);
     }
 
     public void createStaticTree() {
@@ -195,17 +204,28 @@ public class BinaryTree {
         }
     }
 
-    public int height(TreeNode root) {
-        if (root == null) {
+    public int height(TreeNode node) {
+        if (node == null) {
             return 0;
         }
-        int left = height(root.left);
-        int right = height(root.right);
+        int left = height(node.left);
+        int right = height(node.right);
         if (left > right) {
             return 1 + left;
         } else {
             return 1 + right;
         }
+    }
+
+    public int diameterOfTree(TreeNode node) {
+        if (node == null) {
+            return 0;
+        }
+        int lHeight = height(node.left);
+        int RHeight = height(node.right);
+        int leftDia = diameterOfTree(node.left);
+        int rightDia = diameterOfTree(node.right);
+        return Math.max(lHeight + RHeight + 1, Math.max(leftDia, rightDia));
     }
 
     public boolean searchData(TreeNode node, int key) {
@@ -309,4 +329,85 @@ public class BinaryTree {
         return false;
     }
 
+    public void verticalOrderOfBTree(TreeNode root) {
+        if (null == mapVerticalDistance) {
+            mapVerticalDistance = new TreeMap<>();
+        } else {
+            mapVerticalDistance.clear();
+        }
+        verticalOrder(root, 0);
+        mapVerticalDistance.forEach((k, v) -> System.out.println("Nodes at distance " + k + " = " + v));
+    }
+
+    private void verticalOrder(TreeNode root, int distance) {
+        if (root == null) {
+            return;
+        }
+        List<Integer> list;
+        if (mapVerticalDistance.containsKey(distance)) {
+            list = mapVerticalDistance.get(distance);
+        } else {
+            list = new ArrayList<>();
+        }
+        list.add(root.data);
+        mapVerticalDistance.put(distance, list);
+        verticalOrder(root.left, distance - 1);
+        verticalOrder(root.right, distance + 1);
+
+    }
+
+    public void topView(TreeNode root, int level) {
+        if (root == null)
+            return;
+        // create a queue for level order traversal
+        Queue<BinaryTree.QueuePack> queue = new LinkedList<>();
+        // add root with level 0 (create a queue item pack)
+        queue.add(new QueuePack(level, root));
+        while (!queue.isEmpty()) {
+            QueuePack q = queue.remove();
+            // take out the items from the package
+            TreeNode tnode = q.tnode;
+            int lvl = q.level;
+
+            // check if this is the first node you are visiting at the level
+            if (ht.containsKey(lvl)) {
+
+            } else {// print it, its the first element at his level
+                System.out.print(tnode.data + "   ");
+                ht.put(lvl, tnode.data);
+            }
+
+            // add the left and right children of visiting nodes to the queue
+            if (tnode.left != null) {
+                queue.add(new QueuePack(lvl - 1, tnode.left));
+            }
+            if (tnode.right != null) {
+                queue.add(new QueuePack(lvl + 1, tnode.right));
+            }
+        }
+
+    }
+
+    public void bottomView(TreeNode node) {
+
+        if (null == mapVerticalDistance) {
+            mapVerticalDistance = new TreeMap<>();
+        } else {
+            mapVerticalDistance.clear();
+        }
+        verticalOrder(node, 0);
+        mapVerticalDistance.forEach((k, v) -> System.out.println("Nodes at distance " + k + " = " + v.get(v.size()-1)));
+
+
+    }
+
+    static class QueuePack {
+        int level;
+        TreeNode tnode;
+
+        public QueuePack(int level, TreeNode tnode) {
+            this.level = level;
+            this.tnode = tnode;
+        }
+    }
 }
