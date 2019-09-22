@@ -22,8 +22,8 @@ public class MaximumSumSubArray {
 
 
         }
-        System.out.println(max_sum);
-         System.out.println(startIndex);
-         System.out.println(endIndex);
+        System.out.println("Max sum: " + max_sum + "\n" + "Start index: "
+                + startIndex + "\n" + "End index: " + endIndex);
+
     }
 }

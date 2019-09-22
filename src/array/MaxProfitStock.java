@@ -26,6 +26,6 @@ public class MaxProfitStock {
         }
         difference = maxStockPrice - minStockPrice;
         profit = profit + difference;
-        System.out.println("Max Profit when buy and sell multi : " + profit);
+        System.out.println("Max Profit when buy and sell stock : " + profit);
     }
 }

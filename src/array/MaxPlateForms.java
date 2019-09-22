@@ -22,6 +22,6 @@ public class MaxPlateForms {
                 j++;
             }
         }
-        System.out.println(max_count);
+        System.out.println(max_count + " Plate form need to pass given timing trains.");
     }
 }
