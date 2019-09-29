@@ -2,7 +2,7 @@ package sorting;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int array[] = {5,3,4,2};
+        int array[] = {0,4,0,0,1,3,4,1,0,2};
         sortArray(array);
 
        // printArray(array);
@@ -24,7 +24,7 @@ public class BubbleSort {
                     temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
-                    printArray(array);
+                   // printArray(array);
                 }
             }
         }
