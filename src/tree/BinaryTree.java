@@ -5,7 +5,11 @@ import org.omg.PortableInterceptor.INACTIVE;
 import java.util.*;
 
 public class BinaryTree {
+
     private TreeNode root;
+    private static Map<Integer, List<Integer>> mapVerticalDistance = null;
+    public static TreeMap<Integer, Integer> ht = new TreeMap<>();
+    private static List<Integer> list;
 
     private class TreeNode {
         private TreeNode left;
@@ -16,11 +20,6 @@ public class BinaryTree {
             this.data = data;
         }
     }
-
-    private static Map<Integer, List<Integer>> mapVerticalDistance = null;
-    public static TreeMap<Integer, Integer> ht = new TreeMap<>();
-    ;
-    private static List<Integer> list;
 
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
@@ -53,7 +52,9 @@ public class BinaryTree {
         // binaryTree.diameterOfTree(binaryTree.root);
         //  System.out.println(binaryTree.minimumDepth(binaryTree.root));
         // System.out.println(binaryTree.diameterOfTree(binaryTree.root));
-        binaryTree.bottomView(binaryTree.root);
+        //binaryTree.levelOrder(binaryTree.root);
+        //System.out.print("----------");
+       // binaryTree.levelOrderInReverse(binaryTree.root);
     }
 
     public void createStaticTree() {
@@ -167,6 +168,32 @@ public class BinaryTree {
                 queue.add(node.right);
             }
 
+        }
+
+    }
+
+    public void levelOrderInReverse(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        java.util.Queue<TreeNode> queue = new LinkedList();
+        java.util.Stack<TreeNode> stack = new Stack<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+
+            TreeNode node = queue.poll();
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            stack.push(node);
+
+        }
+        while (!stack.empty()) {
+            TreeNode node = stack.pop();
+            System.out.println(node.data);
         }
 
     }
@@ -396,9 +423,38 @@ public class BinaryTree {
             mapVerticalDistance.clear();
         }
         verticalOrder(node, 0);
-        mapVerticalDistance.forEach((k, v) -> System.out.println("Nodes at distance " + k + " = " + v.get(v.size()-1)));
+        mapVerticalDistance.forEach((k, v) -> System.out.println("Nodes at distance " + k + " = " + v.get(v.size() - 1)));
 
 
+    }
+
+    public boolean isBst(TreeNode node, int max, int min) {
+        if (node == null) {
+            return true;
+        }
+        if (node.data <= min || node.data > max) {
+            return false;
+
+        }
+        return isBst(node.left, min, node.data) && isBst(node.right, node.data, max);
+    }
+
+    public TreeNode lca(TreeNode node, TreeNode n1, TreeNode n2) {
+        if (node == null) {
+            return null;
+        }
+        if (n1 == null || n2 == null) {
+            return node;
+        }
+        TreeNode left = lca(node.left, n1, n2);
+        TreeNode right = lca(node.right, n1, n2);
+        if (left == null && right == null) {
+            return null;
+        }
+        if (left != null && right != null) {
+            return node;
+        }
+        return left != null ? left : right;
     }
 
     static class QueuePack {
