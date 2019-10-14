@@ -2,7 +2,7 @@ package array;
 
 public class ZigZagArray {
     public static void main(String[] args) {
-        int array[] = {1, 6, 5, 4, 2, 7, 6, 8, 9};
+        int array[] = {6,5,4,3,2,1};
         zigZag(array);
         for (int i : array) {
             System.out.print(i + " ,");

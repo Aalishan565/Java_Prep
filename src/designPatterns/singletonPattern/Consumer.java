@@ -1,4 +1,4 @@
-package singletonPattern;
+package designPatterns.singletonPattern;
 
 public class Consumer {
     private static Singleton singleton1;

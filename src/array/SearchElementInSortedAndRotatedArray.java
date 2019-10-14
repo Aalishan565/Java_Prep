@@ -27,7 +27,6 @@ public class SearchElementInSortedAndRotatedArray {
             }
         }
         System.out.println("Element not found");
-        ;
     }
 
     private static int findPivotElement(int[] array, int start, int end) {
