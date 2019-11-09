@@ -54,7 +54,7 @@ public class BinaryTree {
         // System.out.println(binaryTree.diameterOfTree(binaryTree.root));
         //binaryTree.levelOrder(binaryTree.root);
         //System.out.print("----------");
-       // binaryTree.levelOrderInReverse(binaryTree.root);
+        // binaryTree.levelOrderInReverse(binaryTree.root);
     }
 
     public void createStaticTree() {
@@ -464,6 +464,87 @@ public class BinaryTree {
         public QueuePack(int level, TreeNode tnode) {
             this.level = level;
             this.tnode = tnode;
+        }
+    }
+
+    private static void preOrderIterative(TreeNode root) {
+        System.out.println("\nPre Order");
+        Map<TreeNode, Integer> map = new HashMap();
+        Stack<TreeNode> s = new Stack();
+        map.put(root, 0);
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode curr = s.peek();
+            if (curr == null) {
+                s.pop();
+                continue;
+            }
+            if (map.get(curr) == 0) {
+                System.out.print(curr.data + "  ");
+            } else if (map.get(curr) == 1) {
+                map.put(curr.left, 0);
+                s.push(curr.left);
+            } else if (map.get(curr) == 2) {
+                map.put(curr.right, 0);
+                s.push(curr.right);
+            } else {
+                s.pop();
+            }
+            map.put(curr, map.get(curr) + 1);
+        }
+    }
+
+    private static void inOrderIterative(TreeNode root) {
+        System.out.println("\nIN Order");
+        Map<TreeNode, Integer> map = new HashMap();
+        Stack<TreeNode> s = new Stack();
+        map.put(root, 0);
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode curr = s.peek();
+            if (curr == null) {
+                s.pop();
+                continue;
+            }
+            if (map.get(curr) == 0) {
+                map.put(curr.left, 0);
+                s.push(curr.left);
+            } else if (map.get(curr) == 1) {
+                System.out.print(curr.data + "  ");
+            } else if (map.get(curr) == 2) {
+                map.put(curr.right, 0);
+                s.push(curr.right);
+            } else {
+                s.pop();
+            }
+            map.put(curr, map.get(curr) + 1);
+        }
+    }
+
+    private static void postOrderIterative(TreeNode root) {
+        System.out.println("post Order");
+        Map<TreeNode, Integer> map = new HashMap();
+        Stack<TreeNode> s = new Stack();
+        map.put(root, 0);
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode curr = s.peek();
+            if (curr == null) {
+                s.pop();
+                continue;
+            }
+            if (map.get(curr) == 0) {
+                map.put(curr.left, 0);
+                s.push(curr.left);
+            } else if (map.get(curr) == 1) {
+                map.put(curr.right, 0);
+                s.push(curr.right);
+            } else if (map.get(curr) == 2) {
+                System.out.print(curr.data + "  ");
+            } else {
+                s.pop();
+            }
+            map.put(curr, map.get(curr) + 1);
         }
     }
 }
