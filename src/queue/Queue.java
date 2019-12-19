@@ -2,6 +2,7 @@ package queue;
 
 
 public class Queue {
+
     public static void main(String[] args) {
         ListNode listNode = new ListNode();
         listNode.insertInQueue(21);
@@ -18,9 +19,7 @@ public class Queue {
         int data;
         ListNode next;
 
-        public ListNode() {
-
-        }
+        public ListNode() { }
 
         public ListNode(int data) {
             this.data = data;
@@ -34,38 +33,36 @@ public class Queue {
         void insertInQueue(int data) {
             ListNode temp = new ListNode(data);
             if (isEmpty()) {
+                System.out.println("isEmpty() Insert in queue " + temp.data);
                 front = temp;
                 rear = temp;
             } else {
                 rear.next = temp;
                 rear = temp;
+                System.out.println("Insert in queue rear: " + rear.data);
             }
             length++;
-
         }
 
         void deQueue() {
             if (isEmpty()) {
                 throw new NullPointerException();
             } else {
+                System.out.println("deQueue() front : " + front.data);
                 front = front.next;
                 length--;
             }
-
         }
 
         void printQueue() {
             if (isEmpty()) {
-                System.out.println("no element are in the stack..");
+                System.out.println("no element are in the queue..");
             }
             ListNode temp = front;
             while (temp != null) {
-                System.out.println(temp.data);
+                System.out.println("Queue elements: " + temp.data);
                 temp = temp.next;
             }
-
         }
-
     }
-
 }

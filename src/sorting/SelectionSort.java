@@ -8,7 +8,7 @@ public class SelectionSort {
     }
 
     private static void sortArray(int[] array) {
-        int min = array[0];
+        int min;
         for (int i = 0; i < array.length; i++) {
             min = i;
             for (int j = i + 1; j < array.length; j++) {

@@ -8,7 +8,7 @@ public class PairOfNumbersGivenSum {
         int sum = 9;
         // pairWithLoops(array, sum);
         //for binary array must be sorted
-    //    System.out.println(pairUsingBinary(array, 0, array.length - 1, sum));
+        //System.out.println(pairUsingBinary(array, 0, array.length - 1, sum));
         pairUsingHash(array,sum);
     }
 

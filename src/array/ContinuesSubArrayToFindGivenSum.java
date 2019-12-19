@@ -20,9 +20,7 @@ public class ContinuesSubArrayToFindGivenSum {
                 System.out.println("Sub array found from index :" + start + " to " + i);
                 return;
             }
-
         }
         System.out.println("No sum found int given array.");
-
     }
 }

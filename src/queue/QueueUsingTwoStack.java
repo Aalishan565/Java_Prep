@@ -42,6 +42,4 @@ public class QueueUsingTwoStack {
     boolean isEmpty() {
         return stack1.isEmpty() && stack2.isEmpty();
     }
-
-
 }

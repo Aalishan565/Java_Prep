@@ -2,7 +2,7 @@ package sorting;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        int array[] = {5, 3, 4, 2};
+        int array[] = {5, 3, 4, 2,1};
         sortArray(array);
         printArray(array);
     }

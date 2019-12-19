@@ -1,9 +1,4 @@
 package linked_list;
-
-import com.sun.istack.internal.NotNull;
-
-import java.util.List;
-
 public class SinglyLinkedList {
 
     static class ListNode {
@@ -295,7 +290,7 @@ public class SinglyLinkedList {
         previous.next = newNode;
     }
 
-    private static void insertNodeAfterGivenNode(@NotNull ListNode previous, int i) {
+    private static void insertNodeAfterGivenNode(ListNode previous, int i) {
         ListNode newNode = new ListNode(i);
         newNode.next = previous.next;
         previous.next = newNode;

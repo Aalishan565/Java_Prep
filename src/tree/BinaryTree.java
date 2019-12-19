@@ -1,7 +1,5 @@
 package tree;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 import java.util.*;
 
 public class BinaryTree {

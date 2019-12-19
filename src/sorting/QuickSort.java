@@ -2,7 +2,7 @@ package sorting;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int array[] = {5, 3, 4, 2};
+        int array[] = {2,1, 3, 5, 4};
         sortArray(array, 0, array.length-1);
         printArray(array);
     }

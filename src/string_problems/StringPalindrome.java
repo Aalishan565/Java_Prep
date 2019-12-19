@@ -2,8 +2,8 @@ package string_problems;
 
 public class StringPalindrome {
     public static void main(String[] args) {
-        String input = "kabak";
-        int i = 0;
+        String input = "kabbak";
+        int i;
         int begin = 0;
         int end = input.length() - 1;
         int mid = (begin + end) / 2;
@@ -16,6 +16,7 @@ public class StringPalindrome {
             }
         }
         if (i == mid + 1) {
+            System.out.println(i);
             System.out.println("String is palindrome");
         } else {
             System.out.println("String is not palindrome");

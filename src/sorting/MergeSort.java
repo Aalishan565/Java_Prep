@@ -20,8 +20,6 @@ public class MergeSort {
             divideArray(array, low, mid);
             divideArray(array, mid + 1, high);
             mergeArray(array, low, mid, high);
-
-
         }
     }
 

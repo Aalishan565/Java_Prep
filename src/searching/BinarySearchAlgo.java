@@ -4,7 +4,7 @@ public class BinarySearchAlgo {
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         //  int index = searchElementWithLoop(array, 0, array.length, 9);
-        int index = searchElementWithRecursion(array, 0, array.length-1, 9);
+        int index = searchElementWithRecursion(array, 0, array.length-1, 25);
         System.out.println(index);
     }
 
