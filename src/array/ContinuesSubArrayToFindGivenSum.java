@@ -2,7 +2,7 @@ package array;
 
 public class ContinuesSubArrayToFindGivenSum {
     public static void main(String args[]) {
-        int arr[] = {1, 4, 20, 3, 10, 5};
+        int arr[] = {1, 2, -1, 4, 2, 3, 10};
         subArraySum(arr, arr.length - 1, 15);
     }
 
@@ -12,7 +12,7 @@ public class ContinuesSubArrayToFindGivenSum {
         int currentSum = 0;
         for (i = 0; i <= length; i++) {
             currentSum = currentSum + arr[i];
-            while (currentSum > sum && start < i - 1) {
+            while (currentSum > sum) {
                 currentSum = currentSum - arr[start];
                 start++;
             }
