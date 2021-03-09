@@ -4,11 +4,6 @@ import java.util.*;
 
 public class BinaryTree {
 
-    private TreeNode root;
-    private static Map<Integer, List<Integer>> mapVerticalDistance = null;
-    public static TreeMap<Integer, Integer> ht = new TreeMap<>();
-    private static List<Integer> list;
-
     private class TreeNode {
         private TreeNode left;
         private TreeNode right;
@@ -19,14 +14,93 @@ public class BinaryTree {
         }
     }
 
+    private TreeNode root;
+
+    private static Map<Integer, List<Integer>> mapVerticalDistance = null;
+
+    public static TreeMap<Integer, Integer> ht = new TreeMap<>();
+
+    private static List<Integer> list;
+
     public static void main(String[] args) {
+
         BinaryTree binaryTree = new BinaryTree();
-        // binaryTree.createTree();
-       /* binaryTree.preOrder(binaryTree.root);
-        System.out.println();
-        binaryTree.inOrder(binaryTree.root);
-        System.out.println();
-        binaryTree.postOrder(binaryTree.root);*/
+
+        //create a static binary tree
+        // binaryTree.createStaticTree();
+
+        //Creating tree by passing nodes dynamically
+        addDynamicNodeToTree(binaryTree);
+
+        //print a tree in following format
+        //preOrder
+        //binaryTree.preOrder(treeNode);
+        //inOrder
+        // binaryTree.inOrder(binaryTree.root);
+        //postOrder
+        //binaryTree.postOrder(binaryTree.root);
+
+
+        //Search node key in binary tree
+        // System.out.println(binaryTree.searchGivenKeyNode(binaryTree.root, 13));
+
+        //Sum of all nodes in binary tree
+        //System.out.println(binaryTree.sumOfAllNodesInTree(binaryTree.root));
+
+        //Height of binary tree
+        //binaryTree.heightOfTree(binaryTree.root);
+
+        //Mirror image of binary tree
+        //TreeNode node = binaryTree.mirrorImage(binaryTree.root);
+        //binaryTree.preOrder(node);
+
+        //Number of nodes in binary tree
+        //System.out.println(binaryTree.numberOfNodesInTree(binaryTree.root));
+
+        //Max element in binary tree
+        // System.out.println(binaryTree.maxElement(binaryTree.root));
+
+        //Delete node in binary tree
+        //  binaryTree.deleteNode(binaryTree.root, 3);
+        // binaryTree.levelOrder(binaryTree.root);
+
+        //Vertical order of binary tree
+        //  binaryTree.verticalOrderOfBTree(binaryTree.root);
+
+        //Diameter of binary tree
+        // binaryTree.diameterOfTree(binaryTree.root);
+
+        //Minimum depth of binary tree
+        //  System.out.println(binaryTree.minimumDepth(binaryTree.root));
+
+        //Level order printing
+        //binaryTree.levelOrder(binaryTree.root);
+        // binaryTree.bsf(binaryTree.root);
+
+
+        //Level order in reverse
+        // binaryTree.levelOrderInReverse(binaryTree.root);
+        //binaryTree.verticalOrderOfBTree(binaryTree.root);
+
+    }
+
+    public void createStaticTree() {
+
+        TreeNode first = new TreeNode(15);
+        TreeNode second = new TreeNode(7);
+        TreeNode third = new TreeNode(18);
+        TreeNode fourth = new TreeNode(19);
+        TreeNode sixth = new TreeNode(20);
+
+        root = first;
+        first.left = second;
+        first.right = third;
+        third.left = fourth;
+        third.right = sixth;
+
+    }
+
+    private static void addDynamicNodeToTree(BinaryTree binaryTree) {
         binaryTree.root = binaryTree.addNode(binaryTree.root, 8);
         binaryTree.root = binaryTree.addNode(binaryTree.root, 3);
         binaryTree.root = binaryTree.addNode(binaryTree.root, 10);
@@ -34,37 +108,8 @@ public class BinaryTree {
         binaryTree.root = binaryTree.addNode(binaryTree.root, 6);
         binaryTree.root = binaryTree.addNode(binaryTree.root, 14);
         binaryTree.root = binaryTree.addNode(binaryTree.root, 4);
-        binaryTree.root = binaryTree.addNode(binaryTree.root, 7);
+        binaryTree.root = binaryTree.addNode(binaryTree.root, 89);
         binaryTree.root = binaryTree.addNode(binaryTree.root, 13);
-        //binaryTree.inOrder(binaryTree.root);
-        // System.out.println(binaryTree.searchData(binaryTree.root, 29));
-        // System.out.println(binaryTree.sumOfTree(binaryTree.root));
-        //binaryTree.height(binaryTree.root);
-        // TreeNode node = binaryTree.mirrorImage(binaryTree.root);
-        // binaryTree.preOrder(node);
-        //System.out.println(binaryTree.numberOfNodes(binaryTree.root));
-        // System.out.println(binaryTree.maxElement(binaryTree.root));
-        //  binaryTree.deleteNode(binaryTree.root, 3);
-        // binaryTree.levelOrder(binaryTree.root);
-        //  binaryTree.verticalOrderOfBTree(binaryTree.root);
-        // binaryTree.diameterOfTree(binaryTree.root);
-        //  System.out.println(binaryTree.minimumDepth(binaryTree.root));
-        // System.out.println(binaryTree.diameterOfTree(binaryTree.root));
-        //binaryTree.levelOrder(binaryTree.root);
-        //System.out.print("----------");
-        // binaryTree.levelOrderInReverse(binaryTree.root);
-    }
-
-    public void createStaticTree() {
-        TreeNode first = new TreeNode(9);
-        TreeNode second = new TreeNode(2);
-        TreeNode third = new TreeNode(3);
-        TreeNode fourth = new TreeNode(4);
-        root = first;
-        first.left = second;
-        first.right = third;
-        second.left = fourth;
-
     }
 
     public TreeNode addNode(TreeNode node, int data) {
@@ -170,6 +215,87 @@ public class BinaryTree {
 
     }
 
+    private static void preOrderIterative(TreeNode root) {
+        System.out.println("\nPre Order");
+        Map<TreeNode, Integer> map = new HashMap();
+        Stack<TreeNode> s = new Stack();
+        map.put(root, 0);
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode curr = s.peek();
+            if (curr == null) {
+                s.pop();
+                continue;
+            }
+            if (map.get(curr) == 0) {
+                System.out.print(curr.data + "  ");
+            } else if (map.get(curr) == 1) {
+                map.put(curr.left, 0);
+                s.push(curr.left);
+            } else if (map.get(curr) == 2) {
+                map.put(curr.right, 0);
+                s.push(curr.right);
+            } else {
+                s.pop();
+            }
+            map.put(curr, map.get(curr) + 1);
+        }
+    }
+
+    private static void inOrderIterative(TreeNode root) {
+        System.out.println("\nIN Order");
+        Map<TreeNode, Integer> map = new HashMap();
+        Stack<TreeNode> s = new Stack();
+        map.put(root, 0);
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode curr = s.peek();
+            if (curr == null) {
+                s.pop();
+                continue;
+            }
+            if (map.get(curr) == 0) {
+                map.put(curr.left, 0);
+                s.push(curr.left);
+            } else if (map.get(curr) == 1) {
+                System.out.print(curr.data + "  ");
+            } else if (map.get(curr) == 2) {
+                map.put(curr.right, 0);
+                s.push(curr.right);
+            } else {
+                s.pop();
+            }
+            map.put(curr, map.get(curr) + 1);
+        }
+    }
+
+    private static void postOrderIterative(TreeNode root) {
+        System.out.println("post Order");
+        Map<TreeNode, Integer> map = new HashMap();
+        Stack<TreeNode> s = new Stack();
+        map.put(root, 0);
+        s.push(root);
+        while (!s.empty()) {
+            TreeNode curr = s.peek();
+            if (curr == null) {
+                s.pop();
+                continue;
+            }
+            if (map.get(curr) == 0) {
+                map.put(curr.left, 0);
+                s.push(curr.left);
+            } else if (map.get(curr) == 1) {
+                map.put(curr.right, 0);
+                s.push(curr.right);
+            } else if (map.get(curr) == 2) {
+                System.out.print(curr.data + "  ");
+            } else {
+                s.pop();
+            }
+            map.put(curr, map.get(curr) + 1);
+        }
+    }
+
     public void levelOrderInReverse(TreeNode root) {
         if (root == null) {
             return;
@@ -229,12 +355,12 @@ public class BinaryTree {
         }
     }
 
-    public int height(TreeNode node) {
+    public int heightOfTree(TreeNode node) {
         if (node == null) {
             return 0;
         }
-        int left = height(node.left);
-        int right = height(node.right);
+        int left = heightOfTree(node.left);
+        int right = heightOfTree(node.right);
         if (left > right) {
             return 1 + left;
         } else {
@@ -246,23 +372,38 @@ public class BinaryTree {
         if (node == null) {
             return 0;
         }
-        int lHeight = height(node.left);
-        int RHeight = height(node.right);
+        int lHeight = heightOfTree(node.left);
+        int RHeight = heightOfTree(node.right);
         int leftDia = diameterOfTree(node.left);
         int rightDia = diameterOfTree(node.right);
         return Math.max(lHeight + RHeight + 1, Math.max(leftDia, rightDia));
     }
 
-    public boolean searchData(TreeNode node, int key) {
+    public boolean searchGivenKeyNode(TreeNode node, int key) {
+        if (node == null) {
+            return false;
+        }
+        if (node.data == key) {
+            return true;
+        }
+        boolean inLeft = searchGivenKeyNode(node.left, key);
+        boolean inRight = searchGivenKeyNode(node.right, key);
+        if (inLeft || inRight) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean searchGivenKeyNodeInBst(TreeNode node, int key) {
         if (node == null) {
             return false;
         }
         if (node.data == key) {
             return true;
         } else if (node.data < key) {
-            return searchData(node.right, key);
+            return searchGivenKeyNode(node.right, key);
         } else if (node.data > key) {
-            return searchData(node.left, key);
+            return searchGivenKeyNode(node.left, key);
         }
         return false;
     }
@@ -284,18 +425,18 @@ public class BinaryTree {
         return max;
     }
 
-    public int sumOfTree(TreeNode node) {
+    public int sumOfAllNodesInTree(TreeNode node) {
         if (node == null) {
             return 0;
         }
-        return node.data + sumOfTree(node.left) + sumOfTree(node.right);
+        return node.data + sumOfAllNodesInTree(node.left) + sumOfAllNodesInTree(node.right);
     }
 
-    public int numberOfNodes(TreeNode node) {
+    public int numberOfNodesInTree(TreeNode node) {
         if (node == null) {
             return 0;
         }
-        return 1 + numberOfNodes(node.left) + numberOfNodes(node.right);
+        return 1 + numberOfNodesInTree(node.left) + numberOfNodesInTree(node.right);
     }
 
     public TreeNode mirrorImage(TreeNode node) {
@@ -320,7 +461,7 @@ public class BinaryTree {
         if (root == null)
             return 0;
 
-        // Base case : Leaf Node. This accounts for height = 1.
+        // Base case : Leaf Node. This accounts for heightOfTree = 1.
         if (root.left == null && root.right == null)
             return 1;
 
@@ -465,84 +606,4 @@ public class BinaryTree {
         }
     }
 
-    private static void preOrderIterative(TreeNode root) {
-        System.out.println("\nPre Order");
-        Map<TreeNode, Integer> map = new HashMap();
-        Stack<TreeNode> s = new Stack();
-        map.put(root, 0);
-        s.push(root);
-        while (!s.empty()) {
-            TreeNode curr = s.peek();
-            if (curr == null) {
-                s.pop();
-                continue;
-            }
-            if (map.get(curr) == 0) {
-                System.out.print(curr.data + "  ");
-            } else if (map.get(curr) == 1) {
-                map.put(curr.left, 0);
-                s.push(curr.left);
-            } else if (map.get(curr) == 2) {
-                map.put(curr.right, 0);
-                s.push(curr.right);
-            } else {
-                s.pop();
-            }
-            map.put(curr, map.get(curr) + 1);
-        }
-    }
-
-    private static void inOrderIterative(TreeNode root) {
-        System.out.println("\nIN Order");
-        Map<TreeNode, Integer> map = new HashMap();
-        Stack<TreeNode> s = new Stack();
-        map.put(root, 0);
-        s.push(root);
-        while (!s.empty()) {
-            TreeNode curr = s.peek();
-            if (curr == null) {
-                s.pop();
-                continue;
-            }
-            if (map.get(curr) == 0) {
-                map.put(curr.left, 0);
-                s.push(curr.left);
-            } else if (map.get(curr) == 1) {
-                System.out.print(curr.data + "  ");
-            } else if (map.get(curr) == 2) {
-                map.put(curr.right, 0);
-                s.push(curr.right);
-            } else {
-                s.pop();
-            }
-            map.put(curr, map.get(curr) + 1);
-        }
-    }
-
-    private static void postOrderIterative(TreeNode root) {
-        System.out.println("post Order");
-        Map<TreeNode, Integer> map = new HashMap();
-        Stack<TreeNode> s = new Stack();
-        map.put(root, 0);
-        s.push(root);
-        while (!s.empty()) {
-            TreeNode curr = s.peek();
-            if (curr == null) {
-                s.pop();
-                continue;
-            }
-            if (map.get(curr) == 0) {
-                map.put(curr.left, 0);
-                s.push(curr.left);
-            } else if (map.get(curr) == 1) {
-                map.put(curr.right, 0);
-                s.push(curr.right);
-            } else if (map.get(curr) == 2) {
-                System.out.print(curr.data + "  ");
-            } else {
-                s.pop();
-            }
-            map.put(curr, map.get(curr) + 1);
-        }
-    }
 }
