@@ -1,6 +1,6 @@
 package array;
 
-public class ContinuesSubArrayToFindGivenSum {
+public class _6_ContinuesSubArrayToFindGivenSum {
     public static void main(String args[]) {
         int arr[] = {1, 2, -1, 4, 2, 3, 10};
         subArraySum(arr, arr.length - 1, 15);

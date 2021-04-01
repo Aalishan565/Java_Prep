@@ -2,7 +2,7 @@ package array;
 
 import java.util.HashMap;
 
-public class PairOfNumbersGivenSum {
+public class _8_PairOfNumbersGivenSum {
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 5, 7, 8, 9};
         int sum = 9;

@@ -1,6 +1,6 @@
 package array;
 
-public class NextGreaterElement {
+public class _11_NextGreaterElement {
     public static void main(String[] args) {
         int array[] = {4, 8, 5, 2, 13, 25, 12, 7};
         //usingLoop(array);

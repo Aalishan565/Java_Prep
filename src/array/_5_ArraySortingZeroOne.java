@@ -1,6 +1,6 @@
 package array;
 
-public class ArraySortingZeroOne {
+public class _5_ArraySortingZeroOne {
     public static void main(String[] args) {
         //int arr[] = {2, 1, 2, 1, 0, 2, 1, 1, 1, 0, 0, 1, 2};
         int arr[] = {0, 1, 1, 0, 1, 1, 1, 0, 0, 0};
@@ -22,7 +22,7 @@ public class ArraySortingZeroOne {
                 break;
             }
         }
-        for (int i = j + 1; i <= arr.length - 1; i++) {
+        for (int i = j + 1; i < arr.length; i++) {
             if (arr[j] == 1 && arr[i] != 1) {
                 int temp = arr[j];
                 arr[j] = arr[i];

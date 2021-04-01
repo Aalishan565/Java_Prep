@@ -1,6 +1,6 @@
 package array;
 
-public class SearchElementInSortedAndRotatedArray {
+public class _14_SearchElementInSortedAndRotatedArray {
     public static void main(String[] args) {
         int array[] = {4, 5, 6, 7, 8, 1, 2, 3};
         int element = 2;

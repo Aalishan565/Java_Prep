@@ -1,6 +1,6 @@
 package array;
 
-public class MaximumSumSubArray {
+public class _7_MaximumSumSubArray {
     public static void main(String[] args) {
         int array[] = {0, 1, 1, 0, 0, -9, 2, 1};
         int max_sum = 0;
@@ -19,8 +19,6 @@ public class MaximumSumSubArray {
                 max_sum_end = 0;
                 searchStartingOfSubArray = i + 1;
             }
-
-
         }
         System.out.println("Max sum: " + max_sum + "\n" + "Start index: "
                 + startIndex + "\n" + "End index: " + endIndex);

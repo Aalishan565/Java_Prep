@@ -1,6 +1,6 @@
 package array;
 
-public class ReversalArrayRotation {
+public class _13_ReversalArrayRotation {
     public static void main(String[] args) {
         int array[] = {1, 2, 4, 3, 5, 6, 7, 8, 9};
         int reverseby = 5;

@@ -1,6 +1,6 @@
 package array;
 
-public class MergeTwoSortedArray {
+public class _10_MergeTwoSortedArray {
     //if length is different complexity o(m+n)
     //if length is same complexity o(2n)
     public static void main(String[] args) {
