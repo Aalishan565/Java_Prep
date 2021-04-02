@@ -5,11 +5,11 @@ import java.util.HashMap;
 public class _8_PairOfNumbersGivenSum {
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 5, 7, 8, 9};
-        int sum = 9;
+        int sum = 10;
         // pairWithLoops(array, sum);
         //for binary array must be sorted
         //System.out.println(pairUsingBinary(array, 0, array.length - 1, sum));
-        pairUsingHash(array,sum);
+        pairUsingHash(array, sum);
     }
 
     private static void pairWithLoops(int[] array, int sum) {
@@ -53,22 +53,19 @@ public class _8_PairOfNumbersGivenSum {
     }
 
     private static void pairUsingHash(int[] array, int sum) {
-        HashMap<Integer,Integer> hm= new HashMap();
+        HashMap<Integer, Integer> hm = new HashMap();
         for (int i = 0; i < array.length; i++) {
-            if (hm.containsKey(sum-array[i])){
-                int pair=hm.get(sum-array[i]);
-               System.out.println(array[pair]);
+            if (hm.containsKey(sum - array[i])) {
+                int pair = hm.get(sum - array[i]);
+                System.out.println(array[pair]);
                 System.out.println(array[i]);
                 return;
-            }else {
-                hm.put(array[i],i);
+            } else {
+                hm.put(array[i], i);
             }
-
-
         }
-       // System.out.println(hm.entrySet());
+        // System.out.println(hm.entrySet());
         System.out.println("No pair found");
-
     }
 
 }

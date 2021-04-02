@@ -38,8 +38,6 @@ public class _9_IntersectionArrays {
                 }
 
             }
-
-
         } else {
             for (int a : array2
                     ) {

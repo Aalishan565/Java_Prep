@@ -2,7 +2,7 @@ package array;
 
 public class _14_SearchElementInSortedAndRotatedArray {
     public static void main(String[] args) {
-        int array[] = {4, 5, 6, 7, 8, 1, 2, 3};
+        int array[] = {4, 5, 6, 7, 8, 2, 3};
         int element = 2;
         int pivot = findPivotElement(array, 0, array.length - 1);
         if (pivot != -1) {
@@ -34,7 +34,6 @@ public class _14_SearchElementInSortedAndRotatedArray {
             return -1;
         }
         int mid = (start + end) / 2;
-
         if (array[mid] > array[mid + 1]) {
             return mid + 1;
         } else if (array[start] < array[mid]) {

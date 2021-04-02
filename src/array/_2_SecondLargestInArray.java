@@ -1,6 +1,7 @@
 package array;
 
 public class _2_SecondLargestInArray {
+
     public static void main(String[] args) {
         int array[] = {1, 5, 3, 7, 8, 9, 8, 7, 7};
         int largest = array[0];
