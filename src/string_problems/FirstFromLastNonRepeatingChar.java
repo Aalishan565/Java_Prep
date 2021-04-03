@@ -1,8 +1,7 @@
 package string_problems;
 
-import java.util.Set;
-
 public class FirstFromLastNonRepeatingChar {
+
     public static void main(String[] args) {
         String word = "aaliishann";
         String result = "";
@@ -12,7 +11,5 @@ public class FirstFromLastNonRepeatingChar {
             }
         }
         System.out.println(result.charAt(result.length() - 1));
-
-
     }
 }

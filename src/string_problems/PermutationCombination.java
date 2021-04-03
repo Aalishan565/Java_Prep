@@ -8,15 +8,15 @@ public class PermutationCombination {
         PermutationCombination permutation = new PermutationCombination();
         permutation.permute(str, 0, n - 1);
     }
-    private void permute(String str, int l, int r)
+    private void permute(String str, int start, int end)
     {
-        if (l == r)
+        if (start == end)
             System.out.println(str);
         else {
-            for (int i = l; i <= r; i++) {
-                str = swap(str, l, i);
-                permute(str, l + 1, r);
-                str = swap(str, l, i);
+            for (int i = start; i <= end; i++) {
+                str = swap(str, start, i);
+                permute(str, start + 1, end);
+                str = swap(str, start, i);
             }
         }
     }
