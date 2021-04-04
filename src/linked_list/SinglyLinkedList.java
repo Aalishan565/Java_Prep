@@ -1,4 +1,5 @@
 package linked_list;
+
 public class SinglyLinkedList {
 
     static class ListNode {
@@ -256,6 +257,26 @@ public class SinglyLinkedList {
             }
         }
         return false;
+    }
+
+    private static ListNode findStartingOfLoopNode(ListNode head, ListNode pointer) {
+        ListNode temp = head;
+        ListNode slowPointer = pointer;
+        while (slowPointer != temp) {
+            temp = temp.next;
+            slowPointer = slowPointer.next;
+        }
+        return temp;
+    }
+
+    private static void removeTheLoopOfLinkedList(ListNode head, ListNode pointer) {
+        ListNode temp = head;
+        ListNode slowPointer = pointer;
+        while (slowPointer.next != temp.next) {
+            temp = temp.next;
+            slowPointer = slowPointer.next;
+        }
+        slowPointer.next = null;
     }
 
     private static ListNode deleteLastNode(ListNode head) {
