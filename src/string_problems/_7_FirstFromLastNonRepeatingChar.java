@@ -1,6 +1,6 @@
 package string_problems;
 
-public class FirstFromLastNonRepeatingChar {
+public class _7_FirstFromLastNonRepeatingChar {
 
     public static void main(String[] args) {
         String word = "aaliishann";

@@ -1,6 +1,6 @@
 package string_problems;
 
-public class RemoveDuplicateFromString {
+public class _6_RemoveDuplicateFromString {
 
     public static void main(String[] args) {
         String input = "aalishan";

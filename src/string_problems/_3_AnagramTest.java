@@ -2,7 +2,7 @@ package string_problems;
 
 import java.util.Arrays;
 
-public class AnagramTest {
+public class _3_AnagramTest {
     public static void main(String[] args) {
         String s1 = "aabbcc";
         String s2 = "abcab";

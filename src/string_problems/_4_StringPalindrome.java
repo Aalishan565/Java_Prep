@@ -1,6 +1,6 @@
 package string_problems;
 
-public class StringPalindrome {
+public class _4_StringPalindrome {
     public static void main(String[] args) {
         String input = "kabbak";
         int i;

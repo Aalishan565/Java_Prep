@@ -3,7 +3,7 @@ package string_problems;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class StringCharCount {
+public class _5_StringCharCount {
     public static void main(String[] args) {
         String s = "aalishan";
         Map<Character, Integer> map = new LinkedHashMap<>();

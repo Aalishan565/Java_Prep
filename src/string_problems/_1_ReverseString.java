@@ -1,6 +1,6 @@
 package string_problems;
 
-public class ReverseString {
+public class _1_ReverseString {
     public static void main(String[] args) {
         String input = "aalishan";
 

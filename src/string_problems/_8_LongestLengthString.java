@@ -1,6 +1,6 @@
 package string_problems;
 
-public class LongestLengthString {
+public class _8_LongestLengthString {
     public static void main(String[] args) {
         String input = "I am a developer";
         String inputArray[] = input.split(" ");

@@ -1,6 +1,6 @@
 package string_problems;
 
-public class ReverseStringSentence {
+public class _2_ReverseStringSentence {
     public static void main(String[] args) {
         String input = "I live in india";
         String inputArray[] = input.split(" ");

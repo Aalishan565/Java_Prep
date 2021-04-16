@@ -1,6 +1,6 @@
 package string_problems;
 
-public class StringPatternMatcher {
+public class _9_StringPatternMatcher {
     public static void main(String[] args) {
         String mainString = "adfaahasfashansdf";
         String subString = "sha";
