@@ -1,6 +1,6 @@
 package sorting;
 
-public class SelectionSort {
+public class _3_SelectionSort {
     public static void main(String[] args) {
         int array[] = {5, 3, 4, 2};
         sortArray(array);

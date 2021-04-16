@@ -1,8 +1,8 @@
 package sorting;
 
-public class InsertionSort {
+public class _2_InsertionSort {
     public static void main(String[] args) {
-        int array[] = {5, 3, 4, 2,1};
+        int array[] = {5, 3, 4, 2, 1};
         sortArray(array);
         printArray(array);
     }

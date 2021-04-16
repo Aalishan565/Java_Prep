@@ -1,6 +1,6 @@
 package sorting;
 
-public class MergeSort {
+public class _4_MergeSort {
     public static void main(String[] args) {
         int array[] = {-2, -4, 1, 2, 3, 4, 5, 6, 2, 1, 5, 4};
         sortArray(array);

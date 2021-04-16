@@ -1,17 +1,16 @@
 package sorting;
 
-public class BubbleSort {
+public class _1_BubbleSort {
+
     public static void main(String[] args) {
         int array[] = {0, 4, 0, 0, 1, 3, 4, 1, 0, 2, 0};
         sortArray(array);
-
         printArray(array);
     }
 
     private static void printArray(int[] array) {
         for (int a : array) {
             System.out.print(a + ",");
-
         }
         System.out.println("\n");
     }
