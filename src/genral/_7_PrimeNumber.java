@@ -1,6 +1,6 @@
 package genral;
 
-public class PrimeNumber {
+public class _7_PrimeNumber {
     public static void main(String[] args) {
         int limit = 100;
         allPrimeNumbers(limit);

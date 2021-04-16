@@ -1,6 +1,6 @@
 package genral;
 
-public class NumberPalindrome {
+public class _4_PalindromeNumber {
     public static void main(String[] args) {
         int number = 121;
         int reminder = 0;

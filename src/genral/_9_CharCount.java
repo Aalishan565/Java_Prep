@@ -3,7 +3,7 @@ package genral;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CharCount {
+public class _9_CharCount {
     public static void main(String[] args) {
         Map<Character,Integer>hm= new HashMap();
         String s="aalishan";

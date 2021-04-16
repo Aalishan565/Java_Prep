@@ -1,6 +1,6 @@
 package genral;
 
-public class Fibonacci {
+public class _6_Fibonacci {
     static int first = 0;
     static int second = 1;
     static int nextNumber;

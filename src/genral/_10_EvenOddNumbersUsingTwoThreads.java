@@ -1,12 +1,12 @@
 package genral;
 
-public class EvenOddUsingThread {
+public class _10_EvenOddNumbersUsingTwoThreads {
 
     static int number = 100;
     static int counter = 1;
 
     public static void main(String[] args) {
-        EvenOddUsingThread eod = new EvenOddUsingThread();
+        _10_EvenOddNumbersUsingTwoThreads eod = new _10_EvenOddNumbersUsingTwoThreads();
         Thread t1 = new Thread(() -> eod.printOdd());
         Thread t2 = new Thread(() -> eod.printEven());
         t1.start();

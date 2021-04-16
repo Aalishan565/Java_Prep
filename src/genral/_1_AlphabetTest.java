@@ -1,6 +1,6 @@
 package genral;
 
-public class AlphabetTest {
+public class _1_AlphabetTest {
     public static void main(String[] args) {
         char ch = '@';
         if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') {

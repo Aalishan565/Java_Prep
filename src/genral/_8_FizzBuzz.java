@@ -1,6 +1,6 @@
 package genral;
 
-public class FizzBuzz {
+public class _8_FizzBuzz {
     public static void main(String[] args) {
         int c3 = 0;
         int c5 = 0;

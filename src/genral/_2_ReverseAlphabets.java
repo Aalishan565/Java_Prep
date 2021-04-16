@@ -1,6 +1,6 @@
 package genral;
 
-public class ReverseAlphabets {
+public class _2_ReverseAlphabets {
     public static void main(String args[]) {
         String input = "ab#,oQ,a@b";
         System.out.println(separate(input));

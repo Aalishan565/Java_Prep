@@ -1,6 +1,6 @@
 package genral;
 
-public class ArmstrongNumber {
+public class _3_ArmstrongNumber {
 
     public static void main(String[] args) {
         int number = 153;

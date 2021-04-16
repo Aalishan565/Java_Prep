@@ -1,6 +1,6 @@
 package genral;
 
-public class Factorial {
+public class _5_Factorial {
     public static void main(String[] args) {
         int number = 5;
         //factorialUsingLoop(number);
