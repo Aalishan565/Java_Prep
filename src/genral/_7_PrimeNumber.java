@@ -2,14 +2,15 @@ package genral;
 
 public class _7_PrimeNumber {
     public static void main(String[] args) {
-        int limit = 100;
+        int limit = 19;
         allPrimeNumbers(limit);
-       // System.out.println(isPrimeNumber(3));
+        // System.out.println(isPrimeNumber(3));
     }
+
     private static void allPrimeNumbers(int limit) {
         for (int i = 1; i <= limit; i++) {
             boolean isPrime = true;
-            for (int j = 2; j < i; j++) {
+            for (int j = 2; j < i / 2; j++) {
                 if (i % j == 0) {
                     isPrime = false;
                     break;
