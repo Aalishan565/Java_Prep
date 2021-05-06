@@ -1,0 +1,35 @@
+package _1_genral;
+
+public class _6_Fibonacci {
+    static int first = 0;
+    static int second = 1;
+    static int nextNumber;
+
+    public static void main(String[] args) {
+        int number = 7;
+        System.out.println(first);
+        System.out.println(second);
+         fibonacciUsingForLoop(number);
+       // fibonacciUsingRecursion(number - 2);
+    }
+
+    private static void fibonacciUsingRecursion(int number) {
+        if (number > 0) {
+            nextNumber = first + second;
+            System.out.println(nextNumber);
+            first = second;
+            second = nextNumber;
+            fibonacciUsingRecursion(number - 1);
+        }
+    }
+
+    private static void fibonacciUsingForLoop(int number) {
+
+        for (int i = 2; i < number; i++) {
+            nextNumber = first + second;
+            System.out.println(nextNumber);
+            first = second;
+            second = nextNumber;
+        }
+    }
+}
