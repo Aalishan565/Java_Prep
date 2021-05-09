@@ -1,10 +1,10 @@
 package _2_designPatterns.facadePattern;
 
-public class MobileShopKeeper {
+public class ShopKeeper {
     Iphone iphone;
     Samsung samsung;
 
-    public MobileShopKeeper() {
+    public ShopKeeper() {
         this.iphone = new Iphone();
         this.samsung = new Samsung();
     }

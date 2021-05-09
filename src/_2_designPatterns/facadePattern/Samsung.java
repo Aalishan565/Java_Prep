@@ -1,6 +1,6 @@
 package _2_designPatterns.facadePattern;
 
-public class Samsung implements MobileShop {
+public class Samsung implements Phone {
     @Override
     public void modelName() {
         System.out.println("Samsung");

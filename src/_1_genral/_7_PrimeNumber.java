@@ -10,7 +10,7 @@ public class _7_PrimeNumber {
     private static void allPrimeNumbers(int limit) {
         for (int i = 1; i <= limit; i++) {
             boolean isPrime = true;
-            for (int j = 2; j < i / 2; j++) {
+            for (int j = 2; j <= i / 2; j++) {
                 if (i % j == 0) {
                     isPrime = false;
                     break;

@@ -1,7 +1,6 @@
 package _2_designPatterns.facadePattern;
 
-public interface MobileShop {
+public interface Phone {
     void modelName();
-
     void modelPrice();
 }

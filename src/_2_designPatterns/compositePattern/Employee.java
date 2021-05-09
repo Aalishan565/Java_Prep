@@ -1,7 +1,6 @@
 package _2_designPatterns.compositePattern;
 
 public interface Employee {
-
     String getName();
 
     int getId();
