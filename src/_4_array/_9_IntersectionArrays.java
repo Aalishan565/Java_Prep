@@ -26,35 +26,24 @@ public class _9_IntersectionArrays {
         Set<Integer> s = new HashSet();
         HashMap<Integer, Integer> hm = new HashMap<>();
         if (length1 > length2) {
-            for (int a : array1
-                    ) {
+            for (int a : array1) {
                 hm.put(a, 1);
-
             }
-            for (int a : array2
-                    ) {
+            for (int a : array2) {
                 if (hm.containsKey(a)) {
                     s.add(a);
                 }
-
             }
         } else {
-            for (int a : array2
-                    ) {
+            for (int a : array2) {
                 hm.put(a, 1);
-
             }
-            for (int a : array1
-                    ) {
+            for (int a : array1) {
                 if (hm.containsKey(a)) {
                     s.add(a);
                 }
             }
-
-
         }
         return s.iterator();
-
     }
-
 }

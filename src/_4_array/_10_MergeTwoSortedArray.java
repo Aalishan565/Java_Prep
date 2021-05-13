@@ -26,7 +26,6 @@ public class _10_MergeTwoSortedArray {
                 right++;
             }
             k++;
-
         }
         while (left < array1.length) {
             mergedArray[k] = array1[left];
