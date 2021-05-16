@@ -13,7 +13,6 @@ public class CircularSinglyLinkedList {
         public ListNode(int data) {
             this.data = data;
         }
-
     }
 
     public CircularSinglyLinkedList() {
@@ -38,7 +37,6 @@ public class CircularSinglyLinkedList {
         cll.insertNodeAtEnd(24);
         cll.removeFirstNode();
         cll.printList();
-
     }
 
     void createList() {
@@ -64,7 +62,6 @@ public class CircularSinglyLinkedList {
             }
             System.out.println(first.data);
         }
-
     }
 
     void insertNodeAtBegining(int data) {

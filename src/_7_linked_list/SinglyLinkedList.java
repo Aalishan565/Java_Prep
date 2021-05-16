@@ -101,25 +101,23 @@ public class SinglyLinkedList {
 
     private static ListNode segrigateListEvenOdd(ListNode node) {
         if (node == null) {
-            return node;
+            return null;
         }
         ListNode odd = node;
         ListNode even = odd.next;
         ListNode evenFirst = even;
 
-        while (1 == 1) {
+        while (true) {
             // If there are no more nodes,
             // then connect first node of even
             // list to the last node of odd list
             if (odd == null || even == null || even.next == null) {
                 odd.next = evenFirst;
                 break;
-
             }
             // Connecting odd nodes
             odd.next = even.next;
             odd = even.next;
-
             // If there are NO more even nodes
             // after current odd.
             if (odd.next == null) {
@@ -132,7 +130,6 @@ public class SinglyLinkedList {
             even = odd.next;
         }
         return node;
-
     }
 
     private static void printFromEnd(ListNode head) {
@@ -146,7 +143,7 @@ public class SinglyLinkedList {
     private static ListNode getIntersectionPoint(ListNode first, ListNode second) {
         int l1 = getLinkedListLength(first);
         int l2 = getLinkedListLength(second);
-        int diff = 0;
+        int diff;
         if (l1 > l2) {
             diff = l1 - l2;
             for (int i = 0; i < diff; i++) {
@@ -171,8 +168,6 @@ public class SinglyLinkedList {
                     return first;
                 }
             }
-
-
         }
         return null;
     }
@@ -197,7 +192,6 @@ public class SinglyLinkedList {
             }
         }
         return head;
-
     }
 
     private static ListNode findNthElement(ListNode head, int position) {
@@ -287,7 +281,6 @@ public class SinglyLinkedList {
             last = last.next;
         }
         previousToLast.next = null;
-
         return head;
     }
 
@@ -340,10 +333,8 @@ public class SinglyLinkedList {
         while (current != null) {
             count++;
             current = current.next;
-
         }
         return count;
-
     }
 
     public static void printLinkedList(ListNode head) {
@@ -353,5 +344,4 @@ public class SinglyLinkedList {
             current = current.next;
         }
     }
-
 }

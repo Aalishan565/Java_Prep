@@ -53,8 +53,6 @@ public class DoublyLinkedList {
         newNode.next = head;
         head = newNode;
         length++;
-
-
     }
 
     public void insertNodeAtLast(int value) {
@@ -66,7 +64,6 @@ public class DoublyLinkedList {
             newNode.previous = tail;
         }
         tail = newNode;
-
     }
 
     public void displayForward() {
@@ -89,7 +86,6 @@ public class DoublyLinkedList {
             System.out.println(current.data);
             current = current.previous;
         }
-
     }
 
     public ListNode deleteHead() {
