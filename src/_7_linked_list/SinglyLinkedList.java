@@ -240,14 +240,19 @@ public class SinglyLinkedList {
 
     private static ListNode removeDuplicate(ListNode head) {
         ListNode current = head;
-        while (current != null && current.next != null) {
-            if (current.data == current.next.data) {
-                current.next = current.next.next;
-            } else {
+        ListNode newList = current;
+        ListNode sortedHead = newList;
+        while (current != null) {
+            if (current.data == newList.data) {
                 current = current.next;
+            } else {
+                newList.next = current;
+                current = current.next;
+                newList = newList.next;
             }
+            newList.next = null;
         }
-        return head;
+        return sortedHead;
     }
 
     private static ListNode findStartingOfLoopNode(ListNode head, ListNode pointer) {

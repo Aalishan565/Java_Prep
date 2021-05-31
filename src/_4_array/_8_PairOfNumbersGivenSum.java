@@ -49,7 +49,6 @@ public class _8_PairOfNumbersGivenSum {
             }
         }
         return false;
-
     }
 
     private static void pairUsingHash(int[] array, int sum) {

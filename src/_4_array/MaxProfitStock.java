@@ -1,31 +1,38 @@
 package _4_array;
 
 public class MaxProfitStock {
+
     public static void main(String[] args) {
         int stockPrices[] = {2, 30, 15, 10, 8, 25, 80};
-        calculateProfit(stockPrices);
+        System.out.println(maxProfit(stockPrices));
+        System.out.println(maxProfitNTransaction(stockPrices));
     }
 
-    private static void calculateProfit(int[] stockPrices) {
-        int minStockPrice = stockPrices[0];
-        int maxStockPrice = stockPrices[0];
-        int profit = 0;
-        int difference;
-
-
-        for (int i = 1; i < stockPrices.length; i++) {
-            if (minStockPrice > stockPrices[i]) {
-                difference = maxStockPrice - minStockPrice;
-                profit = profit + difference;
-                minStockPrice = stockPrices[i];
-                maxStockPrice = stockPrices[i];
-            } else if (maxStockPrice < stockPrices[i]) {
-                maxStockPrice = stockPrices[i];
+    //if only one transaction (1 buy and 1 sell)
+    public static int maxProfit(int[] prices) {
+        int minBuyPrice = prices[0];
+        int profitIfSoldToday = 0;
+        int overAllProfit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (minBuyPrice > prices[i]) {
+                minBuyPrice = prices[i];
             }
-
+            profitIfSoldToday = prices[i] - minBuyPrice;
+            if (profitIfSoldToday > overAllProfit) {
+                overAllProfit = profitIfSoldToday;
+            }
         }
-        difference = maxStockPrice - minStockPrice;
-        profit = profit + difference;
-        System.out.println("Max Profit when buy and sell stock : " + profit);
+        return overAllProfit;
+    }
+
+    //if transactions are N
+    public static int maxProfitNTransaction(int[] stockPrices) {
+        int totalProfit = 0;
+        for (int i = 1; i < stockPrices.length; i++) {
+            if (stockPrices[i] > stockPrices[i - 1]) {
+                totalProfit += stockPrices[i] - stockPrices[i - 1];
+            }
+        }
+        return totalProfit;
     }
 }
