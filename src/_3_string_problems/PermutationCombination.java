@@ -20,13 +20,13 @@ public class PermutationCombination {
             }
         }
     }
-    public String swap(String a, int i, int j)
+    public String swap(String a, int index1, int index2)
     {
         char temp;
         char[] charArray = a.toCharArray();
-        temp = charArray[i];
-        charArray[i] = charArray[j];
-        charArray[j] = temp;
+        temp = charArray[index1];
+        charArray[index1] = charArray[index2];
+        charArray[index2] = temp;
         return String.valueOf(charArray);
     }
 }
