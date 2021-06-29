@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class _5_StringCharCount {
+
     public static void main(String[] args) {
         String s = "aalishan";
         Map<Character, Integer> map = new LinkedHashMap<>();
@@ -19,8 +20,7 @@ public class _5_StringCharCount {
         //map.forEach((X,Y)-> System.out.println(X+" "+Y));
         StringBuffer sb = new StringBuffer();
         map.forEach((X, Y) -> sb.append(X + "" + Y));
-
         System.out.println(sb);
-
     }
+
 }

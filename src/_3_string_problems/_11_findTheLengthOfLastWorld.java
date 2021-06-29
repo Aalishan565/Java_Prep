@@ -1,6 +1,7 @@
 package _3_string_problems;
 
 public class _11_findTheLengthOfLastWorld {
+
     public static void main(String[] args) {
         System.out.println(lengthOfLastWord("Hello World"));
     }

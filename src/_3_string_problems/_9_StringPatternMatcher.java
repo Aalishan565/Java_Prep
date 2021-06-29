@@ -1,6 +1,7 @@
 package _3_string_problems;
 
 public class _9_StringPatternMatcher {
+
     public static void main(String[] args) {
         String mainString = "adfaahasfashansdf";
         String subString = "sha";
@@ -14,7 +15,6 @@ public class _9_StringPatternMatcher {
                     break;
                 }
             } else {
-                Math.sqrt((double) 2);
                 j = 0;
                 if (i < mainString.length() - 1) {
                     startingPoint = i + 1;
@@ -29,4 +29,5 @@ public class _9_StringPatternMatcher {
             System.out.println("Not found");
         }
     }
+
 }

@@ -1,15 +1,15 @@
 package _3_string_problems;
 
 public class PermutationCombination {
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         String str = "ABC";
         int n = str.length();
         PermutationCombination permutation = new PermutationCombination();
         permutation.permute(str, 0, n - 1);
     }
-    private void permute(String str, int start, int end)
-    {
+
+    private void permute(String str, int start, int end) {
         if (start == end)
             System.out.println(str);
         else {
@@ -20,8 +20,8 @@ public class PermutationCombination {
             }
         }
     }
-    public String swap(String a, int index1, int index2)
-    {
+
+    public String swap(String a, int index1, int index2) {
         char temp;
         char[] charArray = a.toCharArray();
         temp = charArray[index1];
@@ -29,4 +29,5 @@ public class PermutationCombination {
         charArray[index2] = temp;
         return String.valueOf(charArray);
     }
+
 }
