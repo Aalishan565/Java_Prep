@@ -3,6 +3,7 @@ package _4_array;
 import java.util.Arrays;
 
 public class SquareTheSortedArray {
+
     public static void main(String[] args) {
         int array[] = {-5, -3, -1, 2, 4};
         int result[] = sortSquaresInOn(array);
@@ -40,6 +41,5 @@ public class SquareTheSortedArray {
         Arrays.sort(arr);
         return arr;
     }
-
 
 }

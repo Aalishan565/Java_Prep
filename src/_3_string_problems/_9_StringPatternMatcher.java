@@ -14,6 +14,7 @@ public class _9_StringPatternMatcher {
                     break;
                 }
             } else {
+                Math.sqrt((double) 2);
                 j = 0;
                 if (i < mainString.length() - 1) {
                     startingPoint = i + 1;

@@ -1,6 +1,7 @@
 package _1_genral;
 
 public class _2_ReverseAlphabets {
+
     public static void main(String args[]) {
         String input = "ab#,oQ,a@b";
         System.out.println(separate(input));
@@ -24,12 +25,10 @@ public class _2_ReverseAlphabets {
                 start++;
                 end--;
             }
-
         }
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < ch.length; i++) {
             sb.append(ch[i]);
-
         }
         return sb.toString();
     }

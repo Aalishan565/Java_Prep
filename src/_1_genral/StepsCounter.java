@@ -19,4 +19,5 @@ public class StepsCounter {
             return d(n - 1) + d(n - 2);
         }
     }
+
 }

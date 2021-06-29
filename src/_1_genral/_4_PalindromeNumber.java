@@ -1,9 +1,10 @@
 package _1_genral;
 
 public class _4_PalindromeNumber {
+
     public static void main(String[] args) {
         int number = 121;
-        int reminder = 0;
+        int reminder;
         int sum = 0;
         int temp = number;
         while (number > 0) {
@@ -17,4 +18,5 @@ public class _4_PalindromeNumber {
             System.out.println("Number is not palindrome");
         }
     }
+
 }

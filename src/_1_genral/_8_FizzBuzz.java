@@ -1,27 +1,28 @@
 package _1_genral;
 
 public class _8_FizzBuzz {
+
     public static void main(String[] args) {
         int c3 = 0;
         int c5 = 0;
         for (int i = 1; i <= 100; i++) {
             c3++;
             c5++;
-            String d = "";
-
+            String value = "";
             if (c3 == 3) {
-                d += "fizz";
+                value += "fizz";
                 c3 = 0;
             }
             if (c5 == 5) {
-                d += "buzz";
+                value += "buzz";
                 c5 = 0;
             }
-            if (d.equals("")) {
+            if (value.equals("")) {
                 System.out.println(i);
             } else {
-                System.out.println(d);
+                System.out.println(value);
             }
         }
     }
+
 }

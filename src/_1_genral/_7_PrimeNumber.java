@@ -1,6 +1,7 @@
 package _1_genral;
 
 public class _7_PrimeNumber {
+
     public static void main(String[] args) {
         int limit = 19;
         allPrimeNumbers(limit);
@@ -30,4 +31,5 @@ public class _7_PrimeNumber {
         }
         return true;
     }
+
 }

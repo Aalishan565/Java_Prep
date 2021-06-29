@@ -9,6 +9,8 @@ public class _9_EvenOddNumbersUsingTwoThreads {
         _9_EvenOddNumbersUsingTwoThreads eod = new _9_EvenOddNumbersUsingTwoThreads();
         Thread t1 = new Thread(() -> eod.printOdd());
         Thread t2 = new Thread(() -> eod.printEven());
+        t1.setName("Odd Thread");
+        t2.setName("Even Thread");
         t1.start();
         t2.start();
     }
@@ -18,6 +20,7 @@ public class _9_EvenOddNumbersUsingTwoThreads {
             while (counter < number) {
                 if (counter % 2 == 0) {
                     try {
+                        System.out.println(" Thread wait(): " + Thread.currentThread().getName());
                         wait();
                     } catch (InterruptedException e) {
                     }
@@ -37,6 +40,7 @@ public class _9_EvenOddNumbersUsingTwoThreads {
             while (counter < number) {
                 if (counter % 2 == 1) {
                     try {
+                        System.out.println(" Thread wait(): " + Thread.currentThread().getName());
                         wait();
                     } catch (InterruptedException ignored) {
                     }

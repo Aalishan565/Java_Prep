@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class _11_RomanToInt {
+
     public static void main(String[] args) {
         convertRomanToInteger("DC");
     }
@@ -19,7 +20,6 @@ public class _11_RomanToInt {
             put('D', 500);
             put('M', 1000);
         }};
-
         for (int i = 0; i < input.length(); i++) {
             if (i != input.length() - 1 && romanMap.get(input.charAt(i)) < romanMap.get(input.charAt(i + 1))) {
                 result += romanMap.get(input.charAt(i + 1)) - romanMap.get(input.charAt(i));
@@ -29,6 +29,6 @@ public class _11_RomanToInt {
             }
         }
         System.out.println(result);
-
     }
+
 }

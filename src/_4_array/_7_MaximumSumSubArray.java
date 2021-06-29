@@ -2,8 +2,13 @@ package _4_array;
 
 public class _7_MaximumSumSubArray {
     public static void main(String[] args) {
-        int array[] = {0, 1, 1, 0, 0, -9, 2, 1};
-        int max_sum = 0;
+        int array[] = {-3, -2, -5, -4, -1};
+        maxSumSubArray(array);
+
+    }
+
+    private static void maxSumSubArray(int[] array) {
+        int max_sum = Integer.MIN_VALUE;
         int max_sum_end = 0;
         int startIndex = 0;
         int endIndex = 0;
@@ -22,6 +27,5 @@ public class _7_MaximumSumSubArray {
         }
         System.out.println("Max sum: " + max_sum + "\n" + "Start index: "
                 + startIndex + "\n" + "End index: " + endIndex);
-
     }
 }

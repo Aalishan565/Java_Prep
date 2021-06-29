@@ -6,7 +6,7 @@ public class _3_ArmstrongNumber {
         int number = 153;
         int temp = number;
         int sum = 0;
-        int reminder = 0;
+        int reminder;
         while (number > 0) {
             reminder = number % 10;
             sum = sum + (reminder * reminder * reminder);
@@ -18,4 +18,5 @@ public class _3_ArmstrongNumber {
             System.out.println(sum + " Number is not armstrong");
         }
     }
+
 }

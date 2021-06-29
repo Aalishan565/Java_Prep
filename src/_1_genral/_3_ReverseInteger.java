@@ -1,12 +1,13 @@
 package _1_genral;
 
 public class _3_ReverseInteger {
+
     public static void main(String[] args) {
         System.out.println(reverseInteger(-223));
     }
 
     public static int reverseInteger(int number) {
-        long reminder = 0;
+        long reminder;
         long sum = 0;
         while (number != 0) {
             reminder = number % 10;
@@ -22,4 +23,5 @@ public class _3_ReverseInteger {
             return (int) sum;
         }
     }
+
 }

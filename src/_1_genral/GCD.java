@@ -1,6 +1,7 @@
 package _1_genral;
 
 public class GCD {
+
     public static void main(String[] args) {
         int a = 500;
         int b = 400;
@@ -23,4 +24,5 @@ public class GCD {
             return findGCD(a, b % a);
         }
     }
+
 }
