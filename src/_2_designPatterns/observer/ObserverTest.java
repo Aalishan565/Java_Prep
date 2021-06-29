@@ -1,6 +1,7 @@
 package _2_designPatterns.observer;
 
 public class ObserverTest {
+
     public static void main(String[] args) {
         FirstSubscriber firstMessageSubscriber = new FirstSubscriber();
         SecondSubscriber secondMessageSubscriber = new SecondSubscriber();
@@ -14,7 +15,6 @@ public class ObserverTest {
         //firstMessageSubscriber and secondMessageSubscriber will receive the update
         messagePublisher.notifyMessage(new Message("This is First Message"));
         System.out.println("---------------------------------------------------------------");
-
-
     }
+
 }

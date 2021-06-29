@@ -1,6 +1,7 @@
 package _2_designPatterns.compositePattern;
 
 public class Engineer implements Employee {
+
     private String name;
     private int id;
     private String department;
@@ -14,18 +15,16 @@ public class Engineer implements Employee {
     @Override
     public String getName() {
         return this.name;
-
     }
 
     @Override
-    public int getId() {return this.id;
-
+    public int getId() {
+        return this.id;
     }
 
     @Override
     public String getDepartment() {
         return this.department;
-
     }
 
     @Override
@@ -36,4 +35,5 @@ public class Engineer implements Employee {
                 ", department='" + department + '\'' +
                 '}';
     }
+
 }

@@ -1,6 +1,7 @@
 package _2_designPatterns.singletonPattern;
 
 public class Consumer {
+
     private static Singleton singleton1;
     private static Singleton singleton2;
     private static Singleton singleton3;

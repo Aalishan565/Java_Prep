@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class MessagePublisher implements Subject {
+
     // Collection of observers
     private Set<Observer> observers = new HashSet<>();
 
@@ -24,4 +25,5 @@ public class MessagePublisher implements Subject {
             one.updateMessage(message);
         }
     }
+
 }

@@ -1,6 +1,7 @@
 package _2_designPatterns.builder;
 
 public class Phone {
+
     private String name;
     private String brand;
     private int prize;
@@ -22,4 +23,5 @@ public class Phone {
                 ", ram=" + ram +
                 '}';
     }
+
 }

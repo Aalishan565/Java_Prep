@@ -1,6 +1,7 @@
 package _2_designPatterns.builder;
 
 public class PhoneBuilder {
+
     private String name;
     private String brand;
     private int prize;
