@@ -12,11 +12,10 @@ public class _3_MissingNumberInArray {
         //missingNumber(array);
     }
 
-
     private static void findMissingNumberUsingFormula(int[] array) {
         int totalNumber = array.length + 1;
         int missingNumber;
-        int expectedSum = 0;
+        int expectedSum;
         int actualSum = 0;
         if (array[0] == 0) {
             expectedSum = (totalNumber * (totalNumber - 1)) / 2;
@@ -42,14 +41,9 @@ public class _3_MissingNumberInArray {
 
     private static void missingNumberWithRepeatedElement(int[] arr) {
         // int[] arr = {4, 3, 6, 2, 1, 1};
-
-        Map<Integer, Boolean> numberMap
-                = new HashMap<>();
-
+        Map<Integer, Boolean> numberMap = new HashMap<>();
         int length = arr.length;
-
         for (Integer i : arr) {
-
             if (numberMap.get(i) == null) {
                 numberMap.put(i, true);
             } else {
@@ -62,4 +56,5 @@ public class _3_MissingNumberInArray {
             }
         }
     }
+
 }

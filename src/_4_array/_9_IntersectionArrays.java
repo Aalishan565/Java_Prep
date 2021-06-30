@@ -3,6 +3,7 @@ package _4_array;
 import java.util.*;
 
 public class _9_IntersectionArrays {
+
     public static void main(String[] args) {
         Integer array1[] = {1, 3, 3, 5, 7, 9};
         Integer array2[] = {1, 2, 3, 3, 4, 4, 5};
@@ -46,4 +47,5 @@ public class _9_IntersectionArrays {
         }
         return s.iterator();
     }
+
 }

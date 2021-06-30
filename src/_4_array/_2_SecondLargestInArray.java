@@ -10,7 +10,6 @@ public class _2_SecondLargestInArray {
             if (array[i] > largest) {
                 secondLargest = largest;
                 largest = array[i];
-
             } else if (array[i] > secondLargest && array[i] != largest) {
                 secondLargest = array[i];
             }
@@ -18,4 +17,5 @@ public class _2_SecondLargestInArray {
         System.out.println(largest);
         System.out.println(secondLargest);
     }
+
 }

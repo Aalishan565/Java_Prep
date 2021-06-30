@@ -1,8 +1,8 @@
 package _4_array;
 
 public class DifferenceBetweenGoodAndBadNumber {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         int array1[] = {0, 4, 0, 0, 1, 3, 4, 1, 0, 2};
         int array2[] = array1.clone();
         printArray(array1);
@@ -12,9 +12,7 @@ public class DifferenceBetweenGoodAndBadNumber {
         int bad[] = new int[array1.length];
         int goodIndex = 0;
         int badIndex = 0;
-
         for (int i = 0; i < result.length; i++) {
-
             if (array2[i] == result[i]) {
                 good[goodIndex] = array2[i];
                 goodIndex++;
@@ -25,10 +23,7 @@ public class DifferenceBetweenGoodAndBadNumber {
         }
         int goodSum = sum(good);
         int badSum = sum(bad);
-
         System.out.println(goodSum - badSum);
-
-
         // printArray(_4_array);
     }
 
@@ -36,7 +31,6 @@ public class DifferenceBetweenGoodAndBadNumber {
         int sum = 0;
         for (int i = 0; i < good.length; i++) {
             sum += good[i];
-
         }
         return sum;
     }
@@ -44,13 +38,12 @@ public class DifferenceBetweenGoodAndBadNumber {
     private static void printArray(int[] array) {
         for (int a : array) {
             System.out.print(a + ",");
-
         }
         System.out.println("\n");
     }
 
     private static int[] sortArray(int[] a) {
-        int arr1[]=a;
+        int arr1[] = a;
         for (int i = 1; i < arr1.length; i++) {
             for (int j = 0; j < arr1.length - i; j++) {
                 if (arr1[j] > arr1[j + 1]) {
@@ -64,4 +57,5 @@ public class DifferenceBetweenGoodAndBadNumber {
         }
         return arr1;
     }
+
 }

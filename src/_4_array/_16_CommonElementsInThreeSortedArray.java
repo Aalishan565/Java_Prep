@@ -3,7 +3,8 @@ package _4_array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommonElementsInThreeSortedArray {
+public class _16_CommonElementsInThreeSortedArray {
+
     public static void main(String[] args) {
         int array1[] = {1, 3, 3, 5, 8, 9};
         int array2[] = {1, 2, 3, 3, 4, 4, 5, 8};
@@ -35,4 +36,5 @@ public class CommonElementsInThreeSortedArray {
             System.out.println(i);
         }
     }
+
 }

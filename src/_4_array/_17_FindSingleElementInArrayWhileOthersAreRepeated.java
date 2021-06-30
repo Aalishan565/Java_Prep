@@ -1,6 +1,7 @@
 package _4_array;
 
-public class FindSingleElementInArrayWhileOthersAreRepeated {
+public class _17_FindSingleElementInArrayWhileOthersAreRepeated {
+
     public static void main(String[] args) {
         int array1[] = {1, 2, 1, 2, 4, 5, 4};
         int res = array1[0];
@@ -9,4 +10,5 @@ public class FindSingleElementInArrayWhileOthersAreRepeated {
         }
         System.out.println(res);
     }
+
 }

@@ -3,6 +3,7 @@ package _4_array;
 import java.util.HashMap;
 
 public class _8_PairOfNumbersGivenSum {
+
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 5, 7, 8, 9};
         int sum = 10;
@@ -31,7 +32,6 @@ public class _8_PairOfNumbersGivenSum {
 
                 }
             }
-
         }
         System.out.println("No match found");
     }

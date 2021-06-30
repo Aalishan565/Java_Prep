@@ -1,6 +1,7 @@
 package _4_array;
 
 public class _5_ArraySortingZeroOne {
+
     public static void main(String[] args) {
         //int arr[] = {2, 1, 2, 1, 0, 2, 1, 1, 1, 0, 0, 1, 2};
         int arr[] = {0, 1, 1, 0, 1, 1, 1, 0, 0, 0};
@@ -78,7 +79,6 @@ public class _5_ArraySortingZeroOne {
                     lastPtr--;
                     break;
             }
-
         }
         return arr;
     }

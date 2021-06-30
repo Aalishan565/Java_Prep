@@ -1,6 +1,7 @@
 package _4_array;
 
 public class _11_NextGreaterElement {
+
     public static void main(String[] args) {
         int array[] = {4, 8, 5, 2, 13, 25, 12, 7};
         //usingLoop(array);
@@ -37,5 +38,6 @@ public class _11_NextGreaterElement {
             System.out.println(stack.pop() + " No next greater elements");
         }
     }
+
 }
 

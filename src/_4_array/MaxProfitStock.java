@@ -35,4 +35,5 @@ public class MaxProfitStock {
         }
         return totalProfit;
     }
+
 }

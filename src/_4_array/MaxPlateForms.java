@@ -3,6 +3,7 @@ package _4_array;
 import java.util.Arrays;
 
 public class MaxPlateForms {
+
     public static void main(String[] args) {
         int arrival[] = {1, 3, 4, 7, 8};
         int departure[] = {2, 5, 6, 7, 9};
@@ -24,4 +25,5 @@ public class MaxPlateForms {
         }
         System.out.println(max_count + " Plate form need to pass given timing trains.");
     }
+
 }

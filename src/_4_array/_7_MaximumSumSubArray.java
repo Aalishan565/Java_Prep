@@ -1,10 +1,10 @@
 package _4_array;
 
 public class _7_MaximumSumSubArray {
+
     public static void main(String[] args) {
         int array[] = {-3, -2, -5, -4, -1};
         maxSumSubArray(array);
-
     }
 
     private static void maxSumSubArray(int[] array) {
@@ -28,4 +28,5 @@ public class _7_MaximumSumSubArray {
         System.out.println("Max sum: " + max_sum + "\n" + "Start index: "
                 + startIndex + "\n" + "End index: " + endIndex);
     }
+
 }

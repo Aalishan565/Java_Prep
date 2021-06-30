@@ -1,10 +1,10 @@
 package _4_array;
 
 public class _4_RemoveDuplicateFromSortedArray {
+
     public static void main(String[] args) {
         int array[] = {1, 1, 2, 2, 3};
         int newArray[] = removeDuplicate(array);
-
         for (int a : newArray) {
             System.out.println(a);
         }

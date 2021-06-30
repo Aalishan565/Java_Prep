@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ConsecutiveArrayLength {
+
     public static void main(String[] args) {
         int array[] = {2, 1, 5, 4, 7, 9, 8};
         findLengthOfConsecutiveArray(array);
@@ -33,6 +34,6 @@ public class ConsecutiveArrayLength {
         System.out.println("longestSequence: " + longestSequence);
         System.out.println("start: " + startNumber);
         System.out.println("end: " + endNumber);
-
     }
+
 }

@@ -1,6 +1,7 @@
 package _4_array;
 
-public class FirstAndLastOccurenceOfElement {
+public class _18_FirstAndLastOccurrenceOfElementInUnSortedArray {
+
     public static void main(String[] args) {
         int array[] = {1, 2, 2, 2, 2, 6, 7, 8, 9, 10};
         int x = 2;
@@ -26,4 +27,5 @@ public class FirstAndLastOccurenceOfElement {
         } else
             System.out.println("Not Found");
     }
+
 }

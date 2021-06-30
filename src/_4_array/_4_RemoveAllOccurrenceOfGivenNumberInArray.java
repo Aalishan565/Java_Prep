@@ -1,6 +1,7 @@
 package _4_array;
 
 public class _4_RemoveAllOccurrenceOfGivenNumberInArray {
+
     public static void main(String[] args) {
         int array[] = {1, 1, 2, 2, 3};
         int index = removeNumber(array, 2);
@@ -25,4 +26,5 @@ public class _4_RemoveAllOccurrenceOfGivenNumberInArray {
         }
         return j;
     }
+
 }
