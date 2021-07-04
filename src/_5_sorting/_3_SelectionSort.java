@@ -1,6 +1,7 @@
 package _5_sorting;
 
 public class _3_SelectionSort {
+
     public static void main(String[] args) {
         int array[] = {5, 3, 4, 2};
         sortArray(array);
@@ -15,20 +16,18 @@ public class _3_SelectionSort {
                 if (array[j] < array[min]) {
                     min = j;
                 }
-
             }
             int temp = array[i];
             array[i] = array[min];
             array[min] = temp;
-
         }
     }
 
     private static void printArray(int[] array) {
         for (int a : array) {
             System.out.print(a + ",");
-
         }
         System.out.println("\n");
     }
+
 }

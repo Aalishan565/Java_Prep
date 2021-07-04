@@ -4,24 +4,21 @@ public class _4_StringPalindrome {
 
     public static void main(String[] args) {
         String input = "kabbak";
-        int index;
+        System.out.println(isStringPalindrome(input));
+    }
+
+    private static boolean isStringPalindrome(String input) {
         int begin = 0;
         int end = input.length() - 1;
-        int mid = (begin + end) / 2;
-        for (index = 0; index <= mid; index++) {
-            if (input.charAt(begin) == input.charAt(end)) {
+        while (begin < end) {
+            if (input.charAt(begin) != input.charAt(end)) {
+                return false;
+            } else {
                 begin++;
                 end--;
-            } else {
-                break;
             }
         }
-        if (index == mid + 1) {
-            System.out.println(index);
-            System.out.println("String is palindrome");
-        } else {
-            System.out.println("String is not palindrome");
-        }
+        return true;
     }
 
 }

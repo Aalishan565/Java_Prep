@@ -20,7 +20,6 @@ public class _5_QuickSort {
 
     private static int partition(int[] array, int left, int right) {
         int pivot = array[(left + right) / 2];
-
         while (left <= right) {
             while (array[left] < pivot) {
                 left++;
@@ -42,8 +41,8 @@ public class _5_QuickSort {
     private static void printArray(int[] array) {
         for (int a : array) {
             System.out.print(a + ",");
-
         }
         System.out.println("\n");
     }
+
 }

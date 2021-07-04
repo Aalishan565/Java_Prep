@@ -2,7 +2,7 @@ package _4_array;
 
 import java.util.Arrays;
 
-public class MaxPlateForms {
+public class _22_MaxPlateForms {
 
     public static void main(String[] args) {
         int arrival[] = {1, 3, 4, 7, 8};

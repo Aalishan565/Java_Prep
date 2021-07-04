@@ -1,10 +1,10 @@
 package _5_sorting;
 
 public class _4_MergeSort {
+
     public static void main(String[] args) {
         int array[] = {-2, -4, 1, 2, 3, 4, 5, 6, 2, 1, 5, 4};
         sortArray(array);
-
         for (int a : array) {
             System.out.println(a);
         }
@@ -52,4 +52,5 @@ public class _4_MergeSort {
             array[low + i] = temp[i];
         }
     }
+
 }

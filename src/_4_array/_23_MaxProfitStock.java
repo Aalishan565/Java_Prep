@@ -1,6 +1,6 @@
 package _4_array;
 
-public class MaxProfitStock {
+public class _23_MaxProfitStock {
 
     public static void main(String[] args) {
         int stockPrices[] = {2, 30, 15, 10, 8, 25, 80};

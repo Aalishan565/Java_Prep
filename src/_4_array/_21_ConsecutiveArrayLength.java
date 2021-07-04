@@ -3,7 +3,7 @@ package _4_array;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ConsecutiveArrayLength {
+public class _21_ConsecutiveArrayLength {
 
     public static void main(String[] args) {
         int array[] = {2, 1, 5, 4, 7, 9, 8};
@@ -19,7 +19,7 @@ public class ConsecutiveArrayLength {
             hashSet.add(array[i]);
         }
         for (int i = 0; i < hashSet.size(); i++) {
-            if (!hashSet.contains(i - 1)) {
+            if (!hashSet.contains(array[i] - 1)) {
                 int number = array[i];
                 startNumber = number;
                 while (hashSet.contains(number)) {

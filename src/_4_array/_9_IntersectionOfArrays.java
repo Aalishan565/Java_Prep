@@ -2,7 +2,7 @@ package _4_array;
 
 import java.util.*;
 
-public class _9_IntersectionArrays {
+public class _9_IntersectionOfArrays {
 
     public static void main(String[] args) {
         Integer array1[] = {1, 3, 3, 5, 7, 9};

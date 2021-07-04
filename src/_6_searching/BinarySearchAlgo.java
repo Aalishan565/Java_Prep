@@ -3,7 +3,8 @@ package _6_searching;
 public class BinarySearchAlgo {
 
     public static void main(String[] args) {
-        int array[] = {7, 8, 9, 1, 2, 3, 4, 5, 6};
+        int array[] = {1, 2, 3, 5, 6};
+        System.out.println(findMissingElementInSortedArray(array));
         //int index = searchElementWithLoop(array, 0, array.length, 9);
         // int index = searchElementWithRecursion(array, 0, array.length - 1, 25);
         // System.out.println(searchLastOccurrence(array, 0, array.length, 5));
@@ -118,4 +119,22 @@ public class BinarySearchAlgo {
             System.out.println("Element present at index " + index);
         }
     }
+
+    //Binary missing element in logN
+    static int findMissingElementInSortedArray(int array[]) {
+        int startIndex = 0, endIndex = array.length - 1;
+        int mid;
+        while ((endIndex - startIndex) > 1) {
+            mid = (startIndex + endIndex) / 2;
+            if ((array[startIndex] - startIndex) != (array[mid] - mid)) {
+                endIndex = mid;
+            } else if ((array[endIndex] - endIndex) != (array[mid] - mid)) {
+                startIndex = mid;
+            } else {
+                return -1;
+            }
+        }
+        return (array[startIndex] + 1);
+    }
+
 }
