@@ -8,4 +8,5 @@ public class _1_ReverseString {
             System.out.print(input.charAt(i));
         }
     }
+
 }

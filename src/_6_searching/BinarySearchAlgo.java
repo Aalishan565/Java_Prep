@@ -3,12 +3,13 @@ package _6_searching;
 public class BinarySearchAlgo {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 5, 6};
-        System.out.println(findMissingElementInSortedArray(array));
-        //int index = searchElementWithLoop(array, 0, array.length, 9);
+        int array[] = {5,6,7,1,2,3,4};
+        //System.out.println(findMissingElementInSortedArray(array));
+        //int index = searchElementWithLoop(array, 0, array.length-1, 9);
         // int index = searchElementWithRecursion(array, 0, array.length - 1, 25);
-        // System.out.println(searchLastOccurrence(array, 0, array.length, 5));
-        //System.out.println(findRotationCountInSortedArray(array));
+        //System.out.println(searchFirstOccurrence(array, 0, array.length - 1, 2));
+        //System.out.println(searchLastOccurrence(array, 0, array.length-1, 2));
+        System.out.println(findRotationCountInSortedArray(array));
         // countOccurrence(array);
         // findElementInSortedAndRotatedArray(array, 9);
 

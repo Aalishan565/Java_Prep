@@ -9,7 +9,7 @@ public class _2_ReverseStringSentence {
         for (int i = inputArray.length - 1; i >= 0; i--) {
             output += inputArray[i] + " ";
         }
-        System.out.println(output);
+        System.out.println(output.trim());
     }
 
 }

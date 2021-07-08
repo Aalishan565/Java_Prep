@@ -4,10 +4,10 @@ public class _2_ReverseAlphabets {
 
     public static void main(String args[]) {
         String input = "ab#,oQ,a@b";
-        System.out.println(separate(input));
+        System.out.println(reverse(input));
     }
 
-    private static String separate(String input) {
+    private static String reverse(String input) {
         char[] ch = input.toCharArray();
         int start = 0;
         int end = ch.length - 1;

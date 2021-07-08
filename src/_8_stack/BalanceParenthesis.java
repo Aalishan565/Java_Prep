@@ -20,11 +20,7 @@ public class BalanceParenthesis {
                 list.add(s.charAt(i));
             }
         }
-
-        if (list.empty()) {
-            return true;
-        } else {
-            return false;
-        }
+        /* if(list.empty()){return true;}else{ return false;}*/
+        return list.empty();
     }
 }

@@ -4,12 +4,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class _3_AnagramTest {
+
     private static int CHARACTER_RANGE = 256;
 
     public static void main(String[] args) {
         String s1 = "aabbcc";
         String s2 = "bbaacc";
-        System.out.println(isAnagramUsingHashMap(s1, s2));
+        System.out.println(isAnagramCounting(s1, s2));
     }
 
     private static boolean isAnagram(String s1, String s2) {
@@ -63,11 +64,7 @@ public class _3_AnagramTest {
                 hm.remove(input2.charAt(i));
             }
         }
-        if (hm.isEmpty()) {
-            return true;
-        } else {
-            return false;
-        }
+        return hm.isEmpty();
     }
 
 }
