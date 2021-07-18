@@ -11,7 +11,7 @@ public class _3_ReverseInteger {
         long sum = 0;
         while (number != 0) {
             reminder = number % 10;
-            System.out.println("reminder" + reminder);
+            System.out.println("reminder:" + reminder);
             sum = (sum * 10) + reminder;
             System.out.println("sum: " + sum);
             number = number / 10;

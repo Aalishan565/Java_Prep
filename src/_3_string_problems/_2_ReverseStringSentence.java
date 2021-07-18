@@ -11,5 +11,5 @@ public class _2_ReverseStringSentence {
         }
         System.out.println(output.trim());
     }
-
+    
 }
