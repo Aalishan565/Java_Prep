@@ -9,18 +9,25 @@ public class _6_Fibonacci {
         int number = 5;
         System.out.println(first);
         System.out.println(second);
-        fibonacciUsingRecursion(number - 2);
+        fibonacciUsingRecursionIfCondition(number - 2);
+        //System.out.println(fibonacciUsingRecursion(3));
         //fibonacciUsingForLoop(number);
     }
 
-    private static void fibonacciUsingRecursion(int number) {
+    private static void fibonacciUsingRecursionIfCondition(int number) {
         if (number > 0) {
             nextNumber = first + second;
             System.out.println(nextNumber);
             first = second;
             second = nextNumber;
-            fibonacciUsingRecursion(number - 1);
+            fibonacciUsingRecursionIfCondition(number - 1);
         }
+    }
+
+    private static int fibonacciUsingRecursion(int number) {
+        if (number <= 1)
+            return number;
+        return fibonacciUsingRecursion(number - 1) + fibonacciUsingRecursion(number - 2);
     }
 
     private static void fibonacciUsingForLoop(int number) {
