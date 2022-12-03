@@ -4,22 +4,24 @@ public class _9_EvenOddNumbersUsingTwoThreads {
 
     static int number = 20;
     static int counter = 1;
-    private static Thread t1;
-    private static Thread t2;
+    private static Thread oddThread;
+    private static Thread evenThread;
 
     public static void main(String[] args) {
         _9_EvenOddNumbersUsingTwoThreads eod = new _9_EvenOddNumbersUsingTwoThreads();
-        t1 = new Thread(() -> eod.printOdd());
-        t2 = new Thread(() -> eod.printEven());
-        t1.setName("Odd Thread");
-        t2.setName("Even Thread");
-        t1.start();
-        t2.start();
+        oddThread = new Thread(() -> eod.printOdd());
+        evenThread = new Thread(() -> eod.printEven());
+
+        oddThread.setName("Odd Thread");
+        evenThread.setName("Even Thread");
+
+        oddThread.start();
+        evenThread.start();
     }
 
     public void printOdd() {
         synchronized (this) {
-            while (counter < number) {
+            while (counter <= number) {
                 // Print the number
                 System.out.println(counter + " " + Thread.currentThread().getName());
                 // Increment counter
@@ -39,7 +41,7 @@ public class _9_EvenOddNumbersUsingTwoThreads {
 
     public void printEven() {
         synchronized (this) {
-            while (counter < number) {
+            while (counter <= number) {
                 // Print the number
                 System.out.println(counter + " " + Thread.currentThread().getName());
                 // Increment counter
