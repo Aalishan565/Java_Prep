@@ -14,8 +14,8 @@ public class _2_SecondLargestInArray {
                 secondLargest = array[i];
             }
         }
-        System.out.println(largest);
-        System.out.println(secondLargest);
+        System.out.println("Largest : " + largest);
+        System.out.println("Second largest : " + secondLargest);
     }
 
 }
