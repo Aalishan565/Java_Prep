@@ -9,13 +9,13 @@ public class _5_ArraySortingZeroOne {
         int firstPtr = 0;
         int lastPtr = arr.length - 1;
         //  int arr1[] = sortArrayZeroOneTwo(arr, firstPtr, lastPtr);
-        int arr1[] = sortArray(arr);
+        int arr1[] = sortArrayUsingForLoop(arr);
         for (int i = 0; i < arr1.length; i++) {
             System.out.println(arr1[i]);
         }
     }
 
-    private static int[] sortArray(int[] arr) {
+    private static int[] sortArrayUsingForLoop(int[] arr) {
         int j = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 1) {
@@ -34,7 +34,7 @@ public class _5_ArraySortingZeroOne {
         return arr;
     }
 
-    private static int[] sortArray(int[] arr, int firstPtr, int lastPtr) {
+    private static int[] sortArrayUsingWhileLoop(int[] arr, int firstPtr, int lastPtr) {
         while (firstPtr < lastPtr) {
             if (arr[firstPtr] == 0 && arr[lastPtr] == 1) {
                 firstPtr++;
