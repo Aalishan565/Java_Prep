@@ -17,13 +17,11 @@ public class _4_RemoveDuplicateFromSortedArray {
             return array;
         }
         while (i < array.length) {
-            if (array[i] == array[j]) {
-                i++;
-            } else {
+            if (array[i] != array[j]) {
                 j++;
                 array[j] = array[i];
-                i++;
             }
+            i++;
         }
         int newArray[] = new int[j + 1];
         for (int k = 0; k < newArray.length; k++) {
