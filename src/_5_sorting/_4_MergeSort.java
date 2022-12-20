@@ -24,10 +24,10 @@ public class _4_MergeSort {
     }
 
     private static void mergeArray(int array[], int low, int mid, int high) {
+        int temp[] = new int[high - low + 1];
         int left = low;
         int right = mid + 1;
         int k = 0;
-        int temp[] = new int[high - low + 1];
         while (left <= mid && right <= high) {
             if (array[left] < array[right]) {
                 temp[k] = array[left];
