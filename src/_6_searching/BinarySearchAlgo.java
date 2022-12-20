@@ -37,7 +37,7 @@ public class BinarySearchAlgo {
             if (array[mid] == key) {
                 return mid;
             } else if (array[mid] > key) {
-                end = mid;
+                end = mid - 1;
             } else {
                 start = mid + 1;
             }
