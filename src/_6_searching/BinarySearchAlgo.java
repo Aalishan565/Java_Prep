@@ -22,7 +22,7 @@ public class BinarySearchAlgo {
             if (array[mid] == key) {
                 return mid;
             } else if (array[mid] > key) {
-                return searchElementWithRecursion(array, start, mid, key);
+                return searchElementWithRecursion(array, start, mid - 1, key);
             } else {
                 return searchElementWithRecursion(array, mid + 1, end, key);
             }
