@@ -6,6 +6,7 @@ public class BinarySearchAlgo {
         int array[] = {5, 6, 7, 1, 2, 3, 4};
         //int index = searchElementWithLoop(array, 0, array.length-1, 9);
         // int index = searchElementWithRecursion(array, 0, array.length - 1, 25);
+
         //System.out.println(findMissingElementInSortedArray(array));
         // findElementInSortedAndRotatedArray(array, 9);
         //System.out.println(searchFirstOccurrence(array, 0, array.length - 1, 2));
@@ -112,13 +113,13 @@ public class BinarySearchAlgo {
     //Find Number in sorted and rotated array
     private static void findElementInSortedAndRotatedArray(int[] array, int key) {
         int pivot = findRotationCountInSortedArray(array);
+        int index;
         if (array[pivot] <= key && key <= array[array.length - 1]) {
-            int index = searchElementWithLoop(array, pivot + 1, array.length - 1, key);
-            System.out.println("Element present at index " + index);
+            index = searchElementWithLoop(array, pivot + 1, array.length - 1, key);
         } else {
-            int index = searchElementWithLoop(array, 0, pivot - 1, key);
-            System.out.println("Element present at index " + index);
+            index = searchElementWithLoop(array, 0, pivot - 1, key);
         }
+        System.out.println("Element present at index " + index);
     }
 
     //Binary missing element in logN
