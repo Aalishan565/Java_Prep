@@ -1,6 +1,6 @@
 package _2_designPatterns.behavioural._1_observer;
 
-public class ObserverTest {
+public class ObserverTestRunner {
 
     public static void main(String[] args) {
         FirstSubscriber firstMessageSubscriber = new FirstSubscriber();
@@ -9,11 +9,11 @@ public class ObserverTest {
         //Creating Message Publisher
         MessagePublisher messagePublisher = new MessagePublisher();
         //Register two Subscribers to get notifications on any update
-        messagePublisher.register(firstMessageSubscriber);
-        messagePublisher.register(secondMessageSubscriber);
-        messagePublisher.register(thirdMessageSubscriber);
+        messagePublisher.registerObserver(firstMessageSubscriber);
+        messagePublisher.registerObserver(secondMessageSubscriber);
+        messagePublisher.registerObserver(thirdMessageSubscriber);
         //firstMessageSubscriber and secondMessageSubscriber will receive the update
-        messagePublisher.notifyMessage(new Message("This is First Message"));
+        messagePublisher.notifyObserver(new Message("This is First Message"));
         System.out.println("---------------------------------------------------------------");
     }
 

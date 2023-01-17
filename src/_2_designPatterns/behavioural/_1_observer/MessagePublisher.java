@@ -9,20 +9,20 @@ public class MessagePublisher implements Subject {
     private Set<Observer> observers = new HashSet<>();
 
     @Override
-    public void register(Observer observer) {
+    public void registerObserver(Observer observer) {
         observers.add(observer);
     }
 
     @Override
-    public void unRegister(Observer observer) {
+    public void unRegisterObserver(Observer observer) {
         observers.remove(observer);
     }
 
     @Override
-    public void notifyMessage(Message message) {
+    public void notifyObserver(Message message) {
         for (Observer one : observers
         ) {
-            one.updateMessage(message);
+            one.onMessageReceive(message);
         }
     }
 
