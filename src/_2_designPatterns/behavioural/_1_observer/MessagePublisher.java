@@ -20,9 +20,9 @@ public class MessagePublisher implements Subject {
 
     @Override
     public void notifyObserver(Message message) {
-        for (Observer one : observers
+        for (Observer observer : observers
         ) {
-            one.onMessageReceive(message);
+            observer.onMessageReceive(message);
         }
     }
 
