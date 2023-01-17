@@ -3,9 +3,9 @@ package _4_array;
 public class _23_MaxProfitStock {
 
     public static void main(String[] args) {
-        int stockPrices[] = {2, 30, 15, 10, 8, 25, 80};
-        System.out.println(maxProfit(stockPrices));
-        System.out.println(maxProfitNTransaction(stockPrices));
+        int stockPrices[] = {5, 2, 6, 1, 4};
+        //System.out.println(maxProfit(stockPrices));
+         System.out.println(maxProfitNTransaction(stockPrices));
     }
 
     //if only one transaction (1 buy and 1 sell)
@@ -14,13 +14,15 @@ public class _23_MaxProfitStock {
         int profitIfSoldToday = 0;
         int overAllProfit = 0;
         for (int i = 0; i < prices.length; i++) {
-            if (minBuyPrice > prices[i]) {
+           /* if (minBuyPrice > prices[i]) {
                 minBuyPrice = prices[i];
-            }
+            }*/
+            minBuyPrice = Math.min(minBuyPrice, prices[i]);
             profitIfSoldToday = prices[i] - minBuyPrice;
-            if (profitIfSoldToday > overAllProfit) {
+            /*if (profitIfSoldToday > overAllProfit) {
                 overAllProfit = profitIfSoldToday;
-            }
+            }*/
+            overAllProfit = Math.max(profitIfSoldToday, overAllProfit);
         }
         return overAllProfit;
     }
