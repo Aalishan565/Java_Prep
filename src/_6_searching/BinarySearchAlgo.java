@@ -29,21 +29,6 @@ public class BinarySearchAlgo {
         return -1;
     }
 
-    //Binary Search with loop
-    private static int searchElementWithLoop(int[] array, int start, int end, int key) {
-        while (start <= end) {
-            int mid = (start + end) / 2;
-            if (array[mid] == key) {
-                return mid;
-            } else if (array[mid] > key) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
-            }
-        }
-        return -1;
-    }
-
     //First Occurrence
     private static int searchFirstOccurrence(int[] array, int low, int high, int key) {
         int result = -1;
