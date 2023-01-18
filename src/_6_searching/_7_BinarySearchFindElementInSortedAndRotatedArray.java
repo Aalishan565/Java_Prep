@@ -4,7 +4,7 @@ public class _7_BinarySearchFindElementInSortedAndRotatedArray {
 
     public static void main(String[] args) {
         int array[] = {5, 6, 7, 1, 2, 3, 4};
-        int index = findElementInSortedAndRotatedArray(array, 7);
+        int index = findElementInSortedAndRotatedArray(array, 1);
         System.out.println("Element present at index " + index);
     }
 
@@ -13,9 +13,9 @@ public class _7_BinarySearchFindElementInSortedAndRotatedArray {
         int pivot = findRotationCountInSortedArray(array);
         int index;
         if (array[pivot] <= key && key <= array[array.length - 1]) {
-            index = searchElementWithLoop(array, pivot + 1, array.length - 1, key);
+            index = searchElementWithLoop(array, pivot, array.length - 1, key);
         } else {
-            index = searchElementWithLoop(array, 0, pivot - 1, key);
+            index = searchElementWithLoop(array, 0, pivot, key);
         }
         return index;
     }
