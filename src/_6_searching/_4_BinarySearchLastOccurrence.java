@@ -9,17 +9,17 @@ public class _4_BinarySearchLastOccurrence {
     }
 
     //Last Occurrence
-    private static int searchLastOccurrence(int[] array, int low, int high, int key) {
+    private static int searchLastOccurrence(int[] array, int start, int end, int key) {
         int result = -1;
-        while (low <= high) {
-            int mid = (low + high) / 2;
+        while (start <= end) {
+            int mid = (start + end) / 2;
             if (array[mid] > key)
-                high = mid - 1;
+                end = mid - 1;
             else if (array[mid] < key)
-                low = mid + 1;
+                start = mid + 1;
             else {
                 result = mid;
-                low = mid + 1;
+                start = mid + 1;
             }
         }
         return result;
