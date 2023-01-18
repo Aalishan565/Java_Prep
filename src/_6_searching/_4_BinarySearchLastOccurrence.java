@@ -2,8 +2,9 @@ package _6_searching;
 
 public class _4_BinarySearchLastOccurrence {
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 6, 8, 9};
-        //System.out.println(searchLastOccurrence(array, 0, array.length-1, 2));
+        int array[] = {1, 2, 3, 3, 3, 4, 6, 8, 9};
+        int index = searchLastOccurrence(array, 0, array.length - 1, 3);
+        System.out.println("Last Occurrence is at " + index);
     }
 
     //Last Occurrence

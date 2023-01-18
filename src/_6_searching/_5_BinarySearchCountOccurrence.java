@@ -3,8 +3,10 @@ package _6_searching;
 public class _5_BinarySearchCountOccurrence {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 6, 8, 9};
-        // countOccurrence(array);
+        int array[] = {1, 2, 3, 3, 3, 4, 6, 8, 9};
+        int element = 5;
+        int count = countOccurrence(array, element);
+        System.out.println("The Occurrence of" + element + "is/are :" + count);
     }
 
     //First Occurrence
@@ -42,11 +44,11 @@ public class _5_BinarySearchCountOccurrence {
     }
 
     //Find Count of a number in sorted array
-    private static void countOccurrence(int[] array) {
-        int firstIndex = searchFirstOccurrence(array, 0, array.length - 1, 5);
-        int lastIndex = searchLastOccurrence(array, 0, array.length - 1, 5);
+    private static int countOccurrence(int[] array, int key) {
+        int firstIndex = searchFirstOccurrence(array, 0, array.length - 1, key);
+        int lastIndex = searchLastOccurrence(array, 0, array.length - 1, key);
         int count = lastIndex - firstIndex;
-        System.out.println(++count);
+        return ++count;
     }
 
 }

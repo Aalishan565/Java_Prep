@@ -2,8 +2,9 @@ package _6_searching;
 
 public class _3_BinarySearchFirstOccurrence {
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 6, 8, 9};
-        //System.out.println(searchFirstOccurrence(array, 0, array.length - 1, 2));
+        int array[] = {1, 2, 3, 3, 3, 4, 6, 8, 9};
+        int index = searchFirstOccurrence(array, 0, array.length - 1, 3);
+        System.out.println("First Occurrence is at " + index);
     }
 
     //First Occurrence

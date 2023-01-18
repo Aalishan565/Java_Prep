@@ -4,11 +4,13 @@ public class _7_BinarySearchFindElementInSortedAndRotatedArray {
 
     public static void main(String[] args) {
         int array[] = {5, 6, 7, 1, 2, 3, 4};
-        findElementInSortedAndRotatedArray(array, 9);
+        int index = findElementInSortedAndRotatedArray(array, 7);
+        System.out.println("Element present at index " + index);
+
     }
 
     //Find Number in sorted and rotated array
-    private static void findElementInSortedAndRotatedArray(int[] array, int key) {
+    private static int findElementInSortedAndRotatedArray(int[] array, int key) {
         int pivot = findRotationCountInSortedArray(array);
         int index;
         if (array[pivot] <= key && key <= array[array.length - 1]) {
@@ -16,7 +18,7 @@ public class _7_BinarySearchFindElementInSortedAndRotatedArray {
         } else {
             index = searchElementWithLoop(array, 0, pivot - 1, key);
         }
-        System.out.println("Element present at index " + index);
+        return index;
     }
 
     //Find Number of Times a Sorted array is Rotated

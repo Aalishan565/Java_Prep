@@ -3,8 +3,8 @@ package _6_searching;
 public class _8_BinarySearchMissingNumberInLogN {
 
     public static void main(String[] args) {
-        int array[] = {5, 6, 7, 1, 2, 3, 4};
-        //System.out.println(findMissingElementInSortedArray(array));
+        int array[] = {1, 2, 3, 4, 6};
+        System.out.println(findMissingElementInSortedArray(array));
     }
 
     //Binary missing element in logN
