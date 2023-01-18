@@ -1,6 +1,6 @@
 package _6_searching;
 
-public class BinarySearchWithRecursion {
+public class _2_BinarySearchWithRecursion {
 
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 6, 8, 9};

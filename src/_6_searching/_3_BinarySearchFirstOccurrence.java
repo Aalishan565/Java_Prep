@@ -1,6 +1,6 @@
 package _6_searching;
 
-public class BinarySearchFirstOccurrence {
+public class _3_BinarySearchFirstOccurrence {
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 6, 8, 9};
         //System.out.println(searchFirstOccurrence(array, 0, array.length - 1, 2));
