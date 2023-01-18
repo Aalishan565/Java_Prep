@@ -1,6 +1,7 @@
 package _6_searching;
 
 public class _3_BinarySearchFirstOccurrence {
+
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 3, 3, 4, 6, 8, 9};
         int index = searchFirstOccurrence(array, 0, array.length - 1, 3);
@@ -23,6 +24,7 @@ public class _3_BinarySearchFirstOccurrence {
         }
         return result;
     }
+
 }
 
 

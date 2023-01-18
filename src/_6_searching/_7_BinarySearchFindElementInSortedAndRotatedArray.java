@@ -6,7 +6,6 @@ public class _7_BinarySearchFindElementInSortedAndRotatedArray {
         int array[] = {5, 6, 7, 1, 2, 3, 4};
         int index = findElementInSortedAndRotatedArray(array, 7);
         System.out.println("Element present at index " + index);
-
     }
 
     //Find Number in sorted and rotated array

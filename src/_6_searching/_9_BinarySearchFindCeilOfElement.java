@@ -7,5 +7,4 @@ public class _9_BinarySearchFindCeilOfElement {
         //System.out.println(findMissingElementInSortedArray(array));
     }
 
-
 }
