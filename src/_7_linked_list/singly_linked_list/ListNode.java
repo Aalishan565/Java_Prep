@@ -1,6 +1,7 @@
-package _7_linked_list;
+package _7_linked_list.singly_linked_list;
 
 public class ListNode {
+
     public int data;
     public ListNode next;
 

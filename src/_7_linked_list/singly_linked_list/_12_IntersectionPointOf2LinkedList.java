@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _12_IntersectionPointOf2LinkedList {
 
     public static ListNode getIntersectionPoint(ListNode first, ListNode second) {
@@ -13,24 +11,17 @@ public class _12_IntersectionPointOf2LinkedList {
             for (int i = 0; i < diff; i++) {
                 first = first.next;
             }
-            while (first.next != null && second.next != null) {
-                first = first.next;
-                second = second.next;
-                if (first == second) {
-                    return first;
-                }
-            }
         } else {
             diff = l2 - l1;
             for (int i = 0; i < diff; i++) {
                 first = first.next;
             }
-            while (first.next != null && second.next != null) {
-                first = first.next;
-                second = second.next;
-                if (first == second) {
-                    return first;
-                }
+        }
+        while (first.next != null && second.next != null) {
+            first = first.next;
+            second = second.next;
+            if (first == second) {
+                return first;
             }
         }
         return null;

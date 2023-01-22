@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _10_ReverseLinkedList {
 
     public static ListNode reverserPointers(ListNode head) {
@@ -25,7 +23,6 @@ public class _10_ReverseLinkedList {
         System.out.println(head.data);
     }
 
-
     public static ListNode reverserLinkedListUsingRecursion(ListNode node) {
         if (node == null || node.next == null) {
             return node;
@@ -35,6 +32,5 @@ public class _10_ReverseLinkedList {
         node.next = null;
         return reverseNode;
     }
-
 
 }

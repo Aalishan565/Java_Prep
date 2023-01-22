@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _6_DeleteHeadLinkedList {
 
     public static ListNode deleteHead(ListNode head) {
@@ -10,6 +8,5 @@ public class _6_DeleteHeadLinkedList {
         temp.next = null;
         return head;
     }
-
 
 }

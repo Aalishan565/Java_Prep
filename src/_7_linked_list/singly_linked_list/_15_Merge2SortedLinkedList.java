@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _15_Merge2SortedLinkedList {
 
     public static ListNode mergeTwoSortedLinkedList(ListNode l1, ListNode l2) {
@@ -30,4 +28,5 @@ public class _15_Merge2SortedLinkedList {
         }
         return tempHead.next;
     }
+
 }

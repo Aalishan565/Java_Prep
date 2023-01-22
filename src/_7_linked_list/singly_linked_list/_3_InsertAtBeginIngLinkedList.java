@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _3_InsertAtBeginIngLinkedList {
 
     public static ListNode insertElementAtBeginning(ListNode head, int element) {
@@ -10,4 +8,5 @@ public class _3_InsertAtBeginIngLinkedList {
         head = newNode;
         return head;
     }
+
 }

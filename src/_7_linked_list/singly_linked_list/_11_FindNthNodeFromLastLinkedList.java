@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _11_FindNthNodeFromLastLinkedList {
 
     public static ListNode findNthElement(ListNode head, int position) {

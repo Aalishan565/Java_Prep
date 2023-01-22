@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _5_InsertAtGivenPositionLinkedList {
 
     public static void insertNodeAtGivenPosition(ListNode head, int position, int data) {
@@ -16,6 +14,5 @@ public class _5_InsertAtGivenPositionLinkedList {
         newNode.next = current;
         previous.next = newNode;
     }
-
 
 }

@@ -1,7 +1,5 @@
 package _7_linked_list.singly_linked_list;
 
-import _7_linked_list.ListNode;
-
 public class _14_RemoveLoopInLinkedList {
 
     public static void removeTheLoopOfLinkedList(ListNode head, ListNode pointer) {
