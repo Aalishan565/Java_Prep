@@ -9,24 +9,24 @@ public class QueueUsingTwoStack {
 
     public static void main(String[] args) {
         QueueUsingTwoStack queueUsingTwoStack = new QueueUsingTwoStack();
-        queueUsingTwoStack.enque(2);
-        queueUsingTwoStack.enque(3);
-        queueUsingTwoStack.enque(4);
+        queueUsingTwoStack.enqueue(2);
+        queueUsingTwoStack.enqueue(3);
+        queueUsingTwoStack.enqueue(4);
         System.out.println("Size of the _9_queue " + queueUsingTwoStack.getSizeofQueue());
         System.out.println("Check if que is empty or not " + queueUsingTwoStack.isEmpty());
-        System.out.println("Deque the element " + queueUsingTwoStack.deque());
-        System.out.println("Deque the element " + queueUsingTwoStack.deque());
-        queueUsingTwoStack.enque(5);
-        queueUsingTwoStack.enque(6);
+        System.out.println("Deque the element " + queueUsingTwoStack.dequeue());
+        System.out.println("Deque the element " + queueUsingTwoStack.dequeue());
+        queueUsingTwoStack.enqueue(5);
+        queueUsingTwoStack.enqueue(6);
         System.out.println("Size of the _9_queue " + queueUsingTwoStack.getSizeofQueue());
         System.out.println("Check if que is empty or not " + queueUsingTwoStack.isEmpty());
     }
 
-    public void enque(int data) {
+    public void enqueue(int data) {
         stack1.push(data);
     }
 
-    public int deque() {
+    public int dequeue() {
         if (stack2.isEmpty()) {
             while (!stack1.isEmpty()) {
                 stack2.push(stack1.pop());
