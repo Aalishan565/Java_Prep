@@ -1,6 +1,6 @@
 package _8_stack;
 
-public class PreviousNearestSmallerElementUsingStack {
+public class _4_NextNearestSmallerElementUsingStack {
 
     public static void main(String[] args) {
         int array[] = {3, 1, 2, 4};
@@ -14,7 +14,7 @@ public class PreviousNearestSmallerElementUsingStack {
         int auxArray[] = new int[array.length];
         java.util.Stack<Integer> stack = new java.util.Stack<>();
         auxArray[0] = -1;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = array.length - 1; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() >= array[i]) {
                 stack.pop();
             }

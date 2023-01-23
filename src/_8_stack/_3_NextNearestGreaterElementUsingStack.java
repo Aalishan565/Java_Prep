@@ -1,20 +1,20 @@
 package _8_stack;
 
-public class PreviousNearestGreaterElementUsingStack {
+public class _3_NextNearestGreaterElementUsingStack {
 
     public static void main(String[] args) {
-        int array[] = {3, 1, 2, 4};
-        int result[] = findPreviousGreaterElements(array);
+        int array[] = {3, 1, 2, 4, 0, 1, 3, 2};
+        int result[] = findNextGreaterElements(array);
         for (int a : result) {
             System.out.println(a);
         }
     }
 
-    private static int[] findPreviousGreaterElements(int[] array) {
+    private static int[] findNextGreaterElements(int[] array) {
         int auxArray[] = new int[array.length];
         java.util.Stack<Integer> stack = new java.util.Stack<>();
-        auxArray[0] = -1;
-        for (int i = 0; i < array.length; i++) {
+        auxArray[array.length - 1] = -1;
+        for (int i = array.length - 2; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() <= array[i]) {
                 stack.pop();
             }

@@ -2,7 +2,7 @@ package _8_stack;
 
 import java.util.Stack;
 
-public class GetMinInOrderOf1 {
+public class _2_GetMinInOrderOf1 {
 
     static Stack<Integer> stackMain = new Stack();
     static Stack<Integer> stackAux = new Stack();
