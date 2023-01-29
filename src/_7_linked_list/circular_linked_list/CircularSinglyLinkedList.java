@@ -1,4 +1,4 @@
-package _7_linked_list;
+package _7_linked_list.circular_linked_list;
 
 import java.util.NoSuchElementException;
 
