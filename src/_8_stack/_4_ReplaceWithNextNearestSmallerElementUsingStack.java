@@ -1,6 +1,6 @@
 package _8_stack;
 
-public class _4_NextNearestSmallerElementUsingStack {
+public class _4_ReplaceWithNextNearestSmallerElementUsingStack {
 
     public static void main(String[] args) {
         int array[] = {3, 1, 2, 4};
