@@ -19,13 +19,13 @@ public class _13_ReversalArrayRotation {
         }
     }
 
-    private static void reverseArray(int[] array, int firstStart, int lastEnd) {
-        while (firstStart < lastEnd) {
-            int temp = array[firstStart];
-            array[firstStart] = array[lastEnd];
-            array[lastEnd] = temp;
-            firstStart++;
-            lastEnd--;
+    private static void reverseArray(int[] array, int startIndex, int endIndex) {
+        while (startIndex < endIndex) {
+            int temp = array[startIndex];
+            array[startIndex] = array[endIndex];
+            array[endIndex] = temp;
+            startIndex++;
+            endIndex--;
         }
     }
 
