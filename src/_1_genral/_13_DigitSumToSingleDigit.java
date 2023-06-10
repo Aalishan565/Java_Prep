@@ -3,7 +3,6 @@ package _1_genral;
 public class _13_DigitSumToSingleDigit {
     
     public static void main(String[] args) {
-        System.out.println(digSum(1239));
         int result = digSum(1239);
         while (result > 9) {
             result = digSum(result);

@@ -4,7 +4,7 @@ public class ShapeConsumer {
 
     public static void main(String[] args) {
         ShapeFactory shapeFactory = new ShapeFactory();
-        Shape s = shapeFactory.getShape("Circle");
+        Shape s = shapeFactory.getShape(ShapeType.RECTANGLE);
         s.draw();
 
     }
