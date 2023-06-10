@@ -6,12 +6,12 @@ public class _6_Fibonacci {
     static int nextNumber;
 
     public static void main(String[] args) {
-        int number = 10;
-       //System.out.println(first);
+        int number = 5;
+        //System.out.println(first);
         //System.out.println(second);
-       // fibonacciUsingRecursionIfCondition(number - 2);
-       // System.out.println(fibonacciUsingRecursion(9));
-        fibonacciUsingForLoop(number);
+        // fibonacciUsingRecursionIfCondition(number - 2);
+        System.out.println(fibonacciSeriesNumberUsingRecursion(2));
+        //fibonacciUsingForLoop(number);
     }
 
     private static void fibonacciUsingRecursionIfCondition(int number) {
@@ -24,10 +24,14 @@ public class _6_Fibonacci {
         }
     }
 
-    private static int fibonacciUsingRecursion(int number) {
-        if (number <= 1)
-            return number;
-        return fibonacciUsingRecursion(number - 1) + fibonacciUsingRecursion(number - 2);
+    private static int fibonacciSeriesNumberUsingRecursion(int number) {
+        if (number <= 0) {
+            return 0;
+        } else if (number == 1) {
+            return 1;
+        } else {
+            return fibonacciSeriesNumberUsingRecursion(number - 1) + fibonacciSeriesNumberUsingRecursion(number - 2);
+        }
     }
 
     private static void fibonacciUsingForLoop(int number) {
@@ -36,7 +40,7 @@ public class _6_Fibonacci {
         int nextNumber = 0;
         System.out.println(firstNumber);
         System.out.println(secondNumber);
-        for (int i = 0; i < number; i++) {
+        for (int i = 2; i < number; i++) {
             nextNumber = firstNumber + secondNumber;
             System.out.println(nextNumber);
             firstNumber = secondNumber;
