@@ -4,15 +4,15 @@ public class _8_LongestLengthString {
 
     public static void main(String[] args) {
         String input = "I am a developer";
-        String inputArray[] = input.split(" ");
+        String[] inputArray = input.split(" ");
         int counter;
         int maxLength = 0;
         String ch = null;
-        for (int i = 0; i < inputArray.length; i++) {
-            counter = inputArray[i].length();
+        for (String s : inputArray) {
+            counter = s.length();
             if (counter > maxLength) {
                 maxLength = counter;
-                ch = inputArray[i];
+                ch = s;
             }
         }
         System.out.println(maxLength);

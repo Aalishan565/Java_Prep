@@ -20,7 +20,7 @@ public class _5_StringCharCount {
         //map.forEach((X,Y)-> System.out.println(X+" "+Y));
         //map.forEach((X, Y) -> System.out.print(X + "" + Y));
         StringBuffer sb = new StringBuffer();
-        map.forEach((X, Y) -> sb.append(X + "" + Y));
+        map.forEach((X, Y) -> sb.append(X).append(Y));
         System.out.println(sb);
     }
 

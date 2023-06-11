@@ -14,7 +14,7 @@ public class LongestSubString {
         int max_len = 1;
         int previousIndex;
         int i;
-        int visited[] = new int[NO_OF_CHARS];
+        int[] visited = new int[NO_OF_CHARS];
         for (i = 0; i < NO_OF_CHARS; i++) {
             visited[i] = -1;
         }

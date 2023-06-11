@@ -6,7 +6,7 @@ public class _12_StringUniqueSubSequences {
 
     public static void main(String[] args) {
         String s = "aaa";
-        HashSet<String> set = new HashSet();
+        HashSet<String> set = new HashSet<>();
         subSequence(s, 0, "", set);
     }
 

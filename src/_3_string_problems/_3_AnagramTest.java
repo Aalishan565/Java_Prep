@@ -26,7 +26,7 @@ public class _3_AnagramTest {
         if (input1.length() != input2.length()) {
             return false;
         }
-        int count[] = new int[CHARACTER_RANGE];
+        int[] count = new int[CHARACTER_RANGE];
         for (int i = 0; i < input1.length(); i++) {
             count[input1.charAt(i)]++;
             count[input2.charAt(i)]--;
@@ -43,7 +43,7 @@ public class _3_AnagramTest {
         if (input1.length() != input2.length()) {
             return false;
         }
-        HashMap<Character, Integer> hm = new HashMap();
+        HashMap<Character, Integer> hm = new HashMap<>();
         for (int i = 0; i < input1.length(); i++) {
             if (hm.containsKey(input1.charAt(i))) {
                 int count = hm.get(input1.charAt(i));
