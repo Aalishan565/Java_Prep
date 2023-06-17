@@ -2,8 +2,8 @@ package _4_array;
 
 public class _6_ContinuesSubArrayToFindGivenSum {
 
-    public static void main(String args[]) {
-        int arr[] = {1, 2, -1, 4, 2, 3, 10};
+    public static void main(String[] args) {
+        int[] arr = {1, 2, -1, 4, 2, 3, 10};
         subArraySum(arr, 15);
     }
 

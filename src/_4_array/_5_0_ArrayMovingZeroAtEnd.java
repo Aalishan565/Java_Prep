@@ -4,10 +4,10 @@ public class _5_0_ArrayMovingZeroAtEnd {
 
     public static void main(String[] args) {
 
-        int arr[] = {2, 0, 1, 0, 1, 5, 1, 0, 0, 0};
-        int arr1[] = sortArrayUsingForLoop(arr);
-        for (int i = 0; i < arr1.length; i++) {
-            System.out.println(arr1[i]);
+        int[] arr = {2, 0, 1, 0, 1, 5, 1, 0, 0, 0};
+        int[] arr1 = sortArrayUsingForLoop(arr);
+        for (int j : arr1) {
+            System.out.println(j);
         }
     }
 

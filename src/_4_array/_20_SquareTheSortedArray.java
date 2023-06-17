@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class _20_SquareTheSortedArray {
 
     public static void main(String[] args) {
-        int array[] = {-5, -3, -1, 2, 4};
-        int result[] = sortSquaresInOn(array);
+        int[] array = {-5, -3, -1, 2, 4};
+        int[] result = sortSquaresInOn(array);
         for (int i = 0; i < result.length; i++) {
             System.out.println(result[i]);
 
@@ -17,7 +17,7 @@ public class _20_SquareTheSortedArray {
     public static int[] sortSquaresInOn(int arr[]) {
         int n = arr.length, left = 0,
                 right = n - 1;
-        int result[] = new int[n];
+        int[] result = new int[n];
         for (int index = n - 1; index >= 0; index--) {
             if (Math.abs(arr[left]) > arr[right]) {
                 result[index] = arr[left] * arr[left];

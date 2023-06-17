@@ -3,7 +3,7 @@ package _4_array;
 public class _15_SearchInsertElementInSortedArray {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 5};
+        int[] array = {1, 2, 3, 5};
         int position = searchInsertElementPosition(array, 4);
         System.out.println(position);
     }

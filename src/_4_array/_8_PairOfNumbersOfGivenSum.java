@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class _8_PairOfNumbersOfGivenSum {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 5, 7, 8, 9};
+        int[] array = {1, 2, 3, 4, 5, 7, 8, 9};
         int sum = 10;
         // pairWithLoops(_4_array, sum);
         //for binary _4_array must be sorted

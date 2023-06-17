@@ -3,7 +3,7 @@ package _4_array;
 public class EqulibiriumPointInArray {
 
     public static void main(String[] args) {
-        int arr[] = {1, 6, 7, 0, 7};
+        int[] arr = {1, 6, 7, 0, 7};
         System.out.println(findEqulibirium(arr));
     }
 

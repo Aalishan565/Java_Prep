@@ -3,7 +3,7 @@ package _4_array;
 public class _11_NextGreaterElementInArray {
 
     public static void main(String[] args) {
-        int array[] = {4, 8, 5, 2, 13, 25, 12, 7};
+        int[] array = {4, 8, 5, 2, 13, 25, 12, 7};
         //usingLoop(array);
         usingStack(array);
     }
@@ -27,7 +27,7 @@ public class _11_NextGreaterElementInArray {
     }
 
     private static void usingStack(int[] array) {
-        java.util.Stack<Integer> stack = new java.util.Stack();
+        java.util.Stack<Integer> stack = new java.util.Stack<>();
         for (int i = 0; i < array.length; i++) {
             while (!stack.isEmpty() && stack.peek() < array[i]) {
                 System.out.println(stack.pop() + " --> " + array[i]);

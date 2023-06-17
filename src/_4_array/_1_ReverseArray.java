@@ -3,7 +3,7 @@ package _4_array;
 public class _1_ReverseArray {
 
     public static void main(String[] args) {
-        int array[] = {2, 3, 1, 4, 9};
+        int[] array = {2, 3, 1, 4, 9};
         //reverseArray(_4_array, 0, _4_array.length - 1);
         reverseArrayWhileLoop(array, 0, array.length - 1);
         printArray(array);

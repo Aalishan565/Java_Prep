@@ -6,7 +6,7 @@ import java.util.Map;
 public class _3_MissingNumberInArray {
 
     public static void main(String[] args) {
-        int array[] = {0, 1, 2, 4, 5, 6};
+        int[] array = {0, 1, 2, 4, 5, 6};
         findMissingNumberUsingFormula(array);
         //missingNumberWithRepeatedElement(array);
         //missingNumber(array);

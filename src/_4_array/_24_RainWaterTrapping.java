@@ -3,15 +3,15 @@ package _4_array;
 public class _24_RainWaterTrapping {
 
     public static void main(String[] args) {
-        int array[] = {3, 1, 2, 4, 0, 1, 3, 2};
+        int[] array = {3, 1, 2, 4, 0, 1, 3, 2};
         int answer = waterTrapping(array);
         System.out.println(answer);
     }
 
     private static int waterTrapping(int[] array) {
         int length = array.length;
-        int leftArray[] = new int[length];
-        int rightArray[] = new int[length];
+        int[] leftArray = new int[length];
+        int[] rightArray = new int[length];
         leftArray[0] = array[0];
         rightArray[length - 1] = array[length - 1];
         for (int i = 1; i < length; i++) {

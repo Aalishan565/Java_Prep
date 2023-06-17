@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class _22_MaxPlateForms {
 
     public static void main(String[] args) {
-        int arrival[] = {1, 3, 4, 7, 8};
-        int departure[] = {2, 5, 6, 7, 9};
+        int[] arrival = {1, 3, 4, 7, 8};
+        int[] departure = {2, 5, 6, 7, 9};
         int max_count = 0;
         int count = 0;
         Arrays.sort(arrival);

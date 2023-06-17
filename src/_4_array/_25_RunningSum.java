@@ -3,8 +3,8 @@ package _4_array;
 public class _25_RunningSum {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 5};
-        int runningSum[] = calculateRunningSum(array);
+        int[] array = {1, 2, 3, 4, 5};
+        int[] runningSum = calculateRunningSum(array);
         for (int value : runningSum
         ) {
             System.out.println(value);
@@ -12,7 +12,7 @@ public class _25_RunningSum {
     }
 
     private static int[] calculateRunningSum(int[] array) {
-        int newArray[] = new int[array.length];
+        int[] newArray = new int[array.length];
         int previousSum = array[0];
         newArray[0] = previousSum;
 

@@ -3,12 +3,12 @@ package _4_array;
 public class _18_FirstAndLastOccurrenceOfElementInUnSortedArray {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 2, 2, 2, 6, 7, 8, 9, 10};
+        int[] array = {1, 2, 2, 2, 2, 6, 7, 8, 9, 10};
         int x = 2;
         findFirstAndLast(array, 2);
     }
 
-    public static void findFirstAndLast(int arr[], int x) {
+    public static void findFirstAndLast(int[] arr, int x) {
         int n = arr.length;
         int first = -1, last = -1;
         for (int i = 0; i < n; i++) {

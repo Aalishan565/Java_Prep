@@ -3,7 +3,7 @@ package _4_array;
 public class _23_MaxProfitStock {
 
     public static void main(String[] args) {
-        int stockPrices[] = {5, 2, 6, 1, 4};
+        int[] stockPrices = {5, 2, 6, 1, 4};
         //System.out.println(maxProfit(stockPrices));
          System.out.println(maxProfitNTransaction(stockPrices));
     }

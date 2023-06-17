@@ -4,12 +4,12 @@ public class _5_ArraySortingZeroOne {
 
     public static void main(String[] args) {
         //int arr[] = {2, 1, 2, 1, 0, 2, 1, 1, 1, 0, 0, 1, 2};
-        int arr[] = {0, 1, 1, 0, 1, 1, 1, 0, 0, 0};
+        int[] arr = {0, 1, 1, 0, 1, 1, 1, 0, 0, 0};
         // int arr[] = {0, 1, 2, 0, 1, 6, 1, 0, 0, 7};
         int firstPtr = 0;
         int lastPtr = arr.length - 1;
         //  int arr1[] = sortArrayZeroOneTwo(arr, firstPtr, lastPtr);
-        int arr1[] = sortArrayUsingForLoop(arr);
+        int[] arr1 = sortArrayUsingForLoop(arr);
         for (int i = 0; i < arr1.length; i++) {
             System.out.println(arr1[i]);
         }

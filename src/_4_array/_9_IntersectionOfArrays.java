@@ -5,8 +5,8 @@ import java.util.*;
 public class _9_IntersectionOfArrays {
 
     public static void main(String[] args) {
-        Integer array1[] = {1, 3, 3, 5, 7, 9};
-        Integer array2[] = {1, 2, 3, 3, 4, 4, 5};
+        Integer[] array1 = {1, 3, 3, 5, 7, 9};
+        Integer[] array2 = {1, 2, 3, 3, 4, 4, 5};
         Iterator iterator = getInterSectionUsingMap(array1, array2);
         while (iterator.hasNext()) {
             System.out.println(iterator.next());

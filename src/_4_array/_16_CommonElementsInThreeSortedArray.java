@@ -6,9 +6,9 @@ import java.util.List;
 public class _16_CommonElementsInThreeSortedArray {
 
     public static void main(String[] args) {
-        int array1[] = {1, 3, 3, 5, 8, 9};
-        int array2[] = {1, 2, 3, 3, 4, 4, 5, 8};
-        int array3[] = {1, 3, 8, 9};
+        int[] array1 = {1, 3, 3, 5, 8, 9};
+        int[] array2 = {1, 2, 3, 3, 4, 4, 5, 8};
+        int[] array3 = {1, 3, 8, 9};
         findCommonElement(array1, array2, array3);
     }
 

@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class _4_RemoveAllOccurrenceOfGivenNumberInArray {
 
     public static void main(String[] args) {
-        int array[] = {1, 1, 2, 2, 3};
-        int index = removeNumber(array, 2);
+        int[] array = {1, 1, 2, 2, 3};
+        /*int index = removeNumber(array, 1);
+         printArray(array, index);*/
         int[] finalArray = removeNumberReturnArray(array, 1);
-       // printArray(array, index);
         printArray(finalArray, finalArray.length);
     }
 
@@ -35,7 +35,9 @@ public class _4_RemoveAllOccurrenceOfGivenNumberInArray {
         int index = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] != number) {
-                array[index++] = array[i];
+                // array[index++] = array[i];
+                array[index] = array[i];
+                index++;
             }
         }
         return Arrays.copyOf(array, index);
