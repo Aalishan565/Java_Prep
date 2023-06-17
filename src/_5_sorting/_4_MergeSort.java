@@ -3,7 +3,7 @@ package _5_sorting;
 public class _4_MergeSort {
 
     public static void main(String[] args) {
-        int array[] = {-2, -4, 1, 2, 3, 4, 5, 6, 2, 1, 5, 4};
+        int[] array = {-2, -4, 1, 2, 3, 4, 5, 6, 2, 1, 5, 4};
         sortArray(array);
         for (int a : array) {
             System.out.println(a);
@@ -23,8 +23,8 @@ public class _4_MergeSort {
         }
     }
 
-    private static void mergeArray(int array[], int low, int mid, int high) {
-        int temp[] = new int[high - low + 1];
+    private static void mergeArray(int[] array, int low, int mid, int high) {
+        int[] temp = new int[high - low + 1];
         int left = low;
         int right = mid + 1;
         int k = 0;

@@ -3,7 +3,7 @@ package _5_sorting;
 public class _5_QuickSort {
 
     public static void main(String[] args) {
-        int array[] = {-2, -4, 1, 2, 3, 4, 5, 6, 2, 1, 5, 4};
+        int[] array = {-2, -4, 1, 2, 3, 4, 5, 6, 2, 1, 5, 4};
         sortArray(array, 0, array.length - 1);
         printArray(array);
     }

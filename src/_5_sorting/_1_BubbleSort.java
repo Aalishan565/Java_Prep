@@ -3,7 +3,7 @@ package _5_sorting;
 public class _1_BubbleSort {
 
     public static void main(String[] args) {
-        int array[] = {0, 4, 0, 0, 1, 3, 4, 1, 0, 2, 0};
+        int[] array = {0, 4, 0, 0, 1, 3, 4, 1, 0, 2, 0};
         sortArray(array);
         printArray(array);
     }

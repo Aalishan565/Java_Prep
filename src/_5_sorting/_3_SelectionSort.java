@@ -3,7 +3,7 @@ package _5_sorting;
 public class _3_SelectionSort {
 
     public static void main(String[] args) {
-        int array[] = {5, 3, 4, 2};
+        int[] array = {5, 3, 4, 2};
         sortArray(array);
         printArray(array);
     }
