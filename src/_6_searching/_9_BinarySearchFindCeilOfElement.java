@@ -3,7 +3,7 @@ package _6_searching;
 public class _9_BinarySearchFindCeilOfElement {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 6, 7, 9};
+        int[] array = {1, 2, 3, 4, 6, 7, 9};
         int key = 10;
         int ceilingIndex = ceilingOfElement(array, key);
         System.out.println("Ceil of number is " + array[ceilingIndex]);

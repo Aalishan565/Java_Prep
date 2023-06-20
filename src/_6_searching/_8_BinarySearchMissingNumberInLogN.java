@@ -3,12 +3,12 @@ package _6_searching;
 public class _8_BinarySearchMissingNumberInLogN {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 6};
+        int[] array = {1, 2, 3, 4, 6};
         System.out.println(findMissingElementInSortedArray(array));
     }
 
     //Binary missing element in logN
-    static int findMissingElementInSortedArray(int array[]) {
+    static int findMissingElementInSortedArray(int[] array) {
         int startIndex = 0, endIndex = array.length - 1;
         int mid;
         while ((endIndex - startIndex) > 1) {

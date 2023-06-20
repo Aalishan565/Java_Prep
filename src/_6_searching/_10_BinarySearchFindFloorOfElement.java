@@ -1,9 +1,9 @@
 package _6_searching;
 
-public class _9_BinarySearchFindFloorOfElement {
+public class _10_BinarySearchFindFloorOfElement {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 6, 7, 9};
+        int[] array = {1, 2, 3, 4, 6, 7, 9};
         int key = 4;
         int floorIndex = floorOfElement(array, key);
         System.out.println("Floor of number is " + array[floorIndex]);

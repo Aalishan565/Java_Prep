@@ -3,7 +3,7 @@ package _6_searching;
 public class _5_BinarySearchCountOccurrence {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 3, 3, 4, 6, 8, 9};
+        int[] array = {1, 2, 3, 3, 3, 4, 6, 8, 9};
         int element = 3;
         int count = countOccurrence(array, element);
         System.out.println("The Occurrence of " + element + " is/are :" + count);
@@ -11,7 +11,7 @@ public class _5_BinarySearchCountOccurrence {
 
     //First Occurrence
     private static int searchFirstOccurrence(int[] array, int low, int high, int key) {
-        int result = -1;
+        int firstOccurrence = -1;
         while (low <= high) {
             int mid = (low + high) / 2;
             if (array[mid] > key)
@@ -19,16 +19,16 @@ public class _5_BinarySearchCountOccurrence {
             else if (array[mid] < key)
                 low = mid + 1;
             else {
-                result = mid;
+                firstOccurrence = mid;
                 high = mid - 1;
             }
         }
-        return result;
+        return firstOccurrence;
     }
 
     //Last Occurrence
     private static int searchLastOccurrence(int[] array, int low, int high, int key) {
-        int result = -1;
+        int lastOccurrence = -1;
         while (low <= high) {
             int mid = (low + high) / 2;
             if (array[mid] > key)
@@ -36,11 +36,11 @@ public class _5_BinarySearchCountOccurrence {
             else if (array[mid] < key)
                 low = mid + 1;
             else {
-                result = mid;
+                lastOccurrence = mid;
                 low = mid + 1;
             }
         }
-        return result;
+        return lastOccurrence;
     }
 
     //Find Count of a number in sorted array

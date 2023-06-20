@@ -3,7 +3,7 @@ package _6_searching;
 public class _2_BinarySearchWithRecursion {
 
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 6, 8, 9};
+        int[] array = {1, 2, 3, 4, 6, 8, 9};
         int index = searchElementWithRecursion(array, 0, array.length - 1, 9);
         System.out.println("Item found in index " + index);
     }
