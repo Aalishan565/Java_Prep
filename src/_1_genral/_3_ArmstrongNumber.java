@@ -7,7 +7,7 @@ public class _3_ArmstrongNumber {
         int temp = number;
         int sum = 0;
         int reminder;
-        while (number > 0) {
+        while (number != 0) {
             reminder = number % 10;
             sum = sum + (reminder * reminder * reminder);
             number = number / 10;

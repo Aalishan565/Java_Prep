@@ -14,11 +14,9 @@ public class _2_ReverseAlphabets {
         while (start <= end) {
             if (!Character.isAlphabetic(ch[start])) {
                 start++;
-            }
-            if (!Character.isAlphabetic(ch[end])) {
+            } else if (!Character.isAlphabetic(ch[end])) {
                 end--;
-            }
-            if (Character.isAlphabetic(ch[start]) && Character.isAlphabetic(ch[end])) {
+            } else {
                 char temp = ch[start];
                 ch[start] = ch[end];
                 ch[end] = temp;

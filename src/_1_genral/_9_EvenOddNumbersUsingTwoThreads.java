@@ -9,8 +9,10 @@ public class _9_EvenOddNumbersUsingTwoThreads {
 
     public static void main(String[] args) {
         _9_EvenOddNumbersUsingTwoThreads eod = new _9_EvenOddNumbersUsingTwoThreads();
-        oddThread = new Thread(() -> eod.printOdd());
-        evenThread = new Thread(() -> eod.printEven());
+        /*oddThread = new Thread(() -> eod.printOdd());
+        evenThread = new Thread(() -> eod.printEven());*/
+        oddThread = new Thread(eod::printOdd);
+        evenThread = new Thread(eod::printEven);
 
         oddThread.setName("Odd Thread");
         evenThread.setName("Even Thread");
@@ -32,7 +34,7 @@ public class _9_EvenOddNumbersUsingTwoThreads {
                     try {
                         System.out.println("wait(): " + Thread.currentThread().getName());
                         wait();
-                    } catch (InterruptedException e) {
+                    } catch (InterruptedException ignored) {
                     }
                 }
             }

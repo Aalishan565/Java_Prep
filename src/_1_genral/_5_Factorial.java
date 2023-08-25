@@ -12,8 +12,9 @@ public class _5_Factorial {
         if (fact == 0) {
             return 1;
         }
-        fact = fact * factorialUsingRecursion(fact - 1);
-        return fact;
+        /*fact = fact * factorialUsingRecursion(fact - 1);
+        return fact;*/
+        return fact * factorialUsingRecursion(fact - 1);
     }
 
     private static void factorialUsingLoop(int number) {
