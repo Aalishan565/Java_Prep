@@ -3,7 +3,7 @@ package _4_array;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class _25_KthLargestElement {
+public class _27_KthLargestElement {
 
     public static void main(String[] args) {
         int[] nums = {3, 2, 1, 5, 6, 7, 4};

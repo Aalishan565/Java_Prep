@@ -1,6 +1,6 @@
 package _4_array;
 
-public class _27_MajorityElementInArray {
+public class _25_MajorityElementInArray {
 
     public static void main(String[] args) {
         int[] nums = {3, 3, 4, 2, 4, 4, 2, 4, 4};

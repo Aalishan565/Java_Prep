@@ -1,6 +1,6 @@
 package _4_array;
 
-public class _25_RunningSum {
+public class _29_RunningSum {
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
