@@ -2,7 +2,7 @@ package _4_array;
 
 import java.util.Arrays;
 
-public class _22_MaxPlateForms {
+public class _22_MaxPlatForms {
 
     public static void main(String[] args) {
         int[] arrival = {1, 3, 4, 7, 8};
@@ -23,7 +23,7 @@ public class _22_MaxPlateForms {
                 j++;
             }
         }
-        System.out.println(max_count + " Plate form need to pass given timing trains.");
+        System.out.println(max_count + " Platform need to pass given timing trains.");
     }
 
 }

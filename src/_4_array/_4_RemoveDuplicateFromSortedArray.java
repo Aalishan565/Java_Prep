@@ -36,7 +36,7 @@ public class _4_RemoveDuplicateFromSortedArray {
 
     private static int[] removeNumberReturnCopyArray(int[] array) {
         int j = 0;
-        int i = 1;
+        int i = 0;
         if (array.length < 2) {
             return array;
         }
