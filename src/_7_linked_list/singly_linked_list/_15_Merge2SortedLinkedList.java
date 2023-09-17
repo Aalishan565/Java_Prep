@@ -23,7 +23,7 @@ public class _15_Merge2SortedLinkedList {
         }
         if (l1 == null) {
             mergedList.next = l2;
-        } else if (l2 == null) {
+        } else {
             mergedList.next = l1;
         }
         return tempHead.next;

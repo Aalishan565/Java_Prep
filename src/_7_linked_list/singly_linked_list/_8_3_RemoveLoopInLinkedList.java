@@ -1,15 +1,15 @@
 package _7_linked_list.singly_linked_list;
 
-public class _13_FindStartingOfLoopLinkedList {
+public class _8_3_RemoveLoopInLinkedList {
 
-    public static ListNode findStartingOfLoopNode(ListNode head, ListNode pointer) {
+    public static void removeTheLoopOfLinkedList(ListNode head, ListNode pointer) {
         ListNode temp = head;
         ListNode slowPointer = pointer;
-        while (slowPointer != temp) {
+        while (slowPointer.next != temp.next) {
             temp = temp.next;
             slowPointer = slowPointer.next;
         }
-        return temp;
+        slowPointer.next = null;
     }
 
 }
