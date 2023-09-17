@@ -14,7 +14,7 @@ public class DecimalToBinary {
         while (temp > 0) {
             reminder = temp % 2;
             temp = temp / 2;
-            s = "" + reminder + s;
+            s = reminder + s;
         }
         System.out.println(s);
     }

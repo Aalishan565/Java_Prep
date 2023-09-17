@@ -22,7 +22,6 @@ public class _5_0_ArrayMovingZeroAtEnd {
             if (arr[j] != 0) {
                 j++;
             }
-
         }
         return arr;
     }

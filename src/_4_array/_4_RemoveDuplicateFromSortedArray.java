@@ -33,14 +33,12 @@ public class _4_RemoveDuplicateFromSortedArray {
         return newArray;
     }
 
-
     private static int[] removeNumberReturnCopyArray(int[] array) {
         int j = 0;
         int i = 0;
         if (array.length < 2) {
             return array;
         }
-
         while (i < array.length) {
             if (array[i] != array[j]) {
                 j++;

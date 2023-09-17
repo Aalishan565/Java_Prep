@@ -17,7 +17,7 @@ public class _8_FizzBuzz {
                 value += "buzz";
                 c5 = 0;
             }
-            if (value.equals("")) {
+            if (value.isEmpty()) {
                 System.out.println(i);
             } else {
                 System.out.println(value);
