@@ -10,7 +10,7 @@ public class _1_BalanceParenthesis {
     }
 
     public static boolean balanced(String s) {
-        Stack<Character> list = new Stack();
+        Stack<Character> list = new Stack<>();
         list.add(s.charAt(0));
         for (int i = 1; i < s.length(); i++) {
             if (!list.empty() && (list.peek() == '(' && s.charAt(i) == ')'

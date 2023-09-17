@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class _2_GetMinInOrderOf1 {
 
-    static Stack<Integer> stackMain = new Stack();
-    static Stack<Integer> stackAux = new Stack();
+    static Stack<Integer> stackMain = new Stack<>();
+    static Stack<Integer> stackAux = new Stack<>();
 
     public static void main(String[] args) {
         addToStack(3);
