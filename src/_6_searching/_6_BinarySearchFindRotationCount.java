@@ -5,7 +5,7 @@ public class _6_BinarySearchFindRotationCount {
     public static void main(String[] args) {
         int[] array = {5, 6, 7, 1, 2, 3, 4};
         int rotationCount = findRotationCountInSortedArray(array);
-        System.out.println("Rotation count of array is " + rotationCount);
+        System.out.println("Rotation count of array is: " + rotationCount);
     }
 
     //Find Number of Times a Sorted array is Rotated
